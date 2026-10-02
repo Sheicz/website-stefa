@@ -92,16 +92,16 @@ var CONFIG = {
       if (!p) return;
       if (p.linkPago) return window.open(p.linkPago, '_blank', 'noopener');
       if (p.precio) return abrirPago(p);
-      return contactar('Hola Estefa, quiero información sobre ' + p.nombre + '.');
+      return contactar('Hola Stefany, quiero información sobre ' + p.nombre + '.');
     }
     // Botones de consulta: <a data-consultar="Talleres para empresas">
     var c = e.target.closest('[data-consultar]');
     if (c) {
       e.preventDefault();
-      return contactar('Hola Estefa, quiero información sobre ' + c.getAttribute('data-consultar') + '.');
+      return contactar('Hola Stefany, quiero información sobre ' + c.getAttribute('data-consultar') + '.');
     }
     if (e.target.closest('[data-constancia]')) {
-      return contactar('Hola Estefa, ya hice mi Yape por ' + modal.getAttribute('data-producto') + '. Te envío la constancia.');
+      return contactar('Hola Stefany, ya hice mi Yape por ' + modal.getAttribute('data-producto') + '. Te envío la constancia.');
     }
     if (e.target.closest('[data-cerrar]')) modal.classList.remove('is-open');
   });
@@ -115,7 +115,7 @@ var CONFIG = {
       e.preventDefault();
       var d = new FormData(form);
       contactar(
-        'Hola Estefa, soy ' + (d.get('nombre') || '') + ' ' + (d.get('apellido') || '') + '.\n' +
+        'Hola Stefany, soy ' + (d.get('nombre') || '') + ' ' + (d.get('apellido') || '') + '.\n' +
           'Correo: ' + (d.get('correo') || '') + '\nTeléfono: ' + (d.get('telefono') || '') + '\n\n' + (d.get('mensaje') || '')
       );
     });

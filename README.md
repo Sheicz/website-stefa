@@ -1,6 +1,6 @@
-# Web de marca personal · Stefachav
+# Web de marca personal · Stefa
 
-Web de Estefa hecha con la plantilla **Grace**, con el mismo diseño y todas sus páginas adaptadas al español con su contenido.
+Web de Stefany hecha con la plantilla **Grace**, con el mismo diseño y todas sus páginas adaptadas al español con su contenido.
 
 ## Páginas
 
@@ -10,13 +10,12 @@ Web de Estefa hecha con la plantilla **Grace**, con el mismo diseño y todas sus
 | Sobre mí | `sobre-mi.html` | `about.html` |
 | Talleres para empresas | `talleres-empresas.html` | `service-details-v1.html` |
 | Asesorías profesionales | `asesorias-profesionales.html` | `service-details-v1.html` |
-| Ponencias y speaker | `ponencias.html` | `service-details-v1.html` |
-| Colaboraciones e influencer | `colaboraciones.html` | `service-details-v1.html` |
+| Ponencias y charlas | `ponencias.html` | `service-details-v1.html` |
+| Colaboraciones & Marcas | `colaboraciones.html` | `service-details-v1.html` |
 | Cursos | `cursos.html` | `project.html` |
 | Curso Python y Machine Learning | `curso-python-machine-learning.html` | `project-details.html` |
 | Curso Python 101 | `curso-python-101.html` | `project-details.html` |
 | Curso Python asíncrono | `curso-python-asincrono.html` | `project-details.html` |
-| Precios | `precios.html` | `pricing.html` |
 | Contacto | `contacto.html` | `contact.html` |
 
 Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `home-v2.html`, etc.) siguen en el repo como referencia, pero ya no aparecen en el menú. Puedes borrarlas cuando quieras.
