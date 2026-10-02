@@ -10,11 +10,14 @@ var CONFIG = {
   correo: 'stefachav@gmail.com',
   whatsapp: '', // EDITAR: código de país + número, sin espacios ni "+", ej. '51987654321'
 
-  // Pago con Yape (hoy)
-  yape: {
-    numero: 'EDITAR',
+  // Pago con Plin o transferencia (hoy)
+  pago: {
+    plin: 'EDITAR número de Plin',
+    banco: 'EDITAR Banco',
+    cuenta: 'EDITAR número de cuenta',
+    cci: 'EDITAR CCI',
     titular: 'EDITAR Nombre del titular',
-    qr: 'assets/img/marca/yape-qr.png', // sube aquí la imagen de tu QR
+    qr: 'assets/img/marca/qr-pago.png', // sube aquí la imagen de tu QR de Plin
   },
 
   // Precio de cada curso o servicio que se paga en la web.
@@ -66,18 +69,20 @@ var CONFIG = {
     if (el.tagName === 'A') el.href = 'mailto:' + CONFIG.correo;
   });
 
-  // Ventana de pago con Yape
+  // Ventana de pago con Plin o transferencia
   var modal = document.getElementById('m-pago');
   function abrirPago(p) {
     document.getElementById('m-pago-body').innerHTML =
       '<h4 class="cs_font_25 cs_primary_color cs_normal text-uppercase">' + esc(p.nombre) + '</h4>' +
       '<div class="cs_font_40 cs_focus_color cs_medium">S/ ' + esc(p.precio) + '</div>' +
       '<div class="cs_height_20"></div>' +
-      '<div class="m_qr"><img src="' + esc(CONFIG.yape.qr) + '" alt="QR de Yape" onerror="this.parentNode.classList.add(\'is-empty\');this.remove()"></div>' +
+      '<div class="m_qr"><img src="' + esc(CONFIG.pago.qr) + '" alt="QR de Plin" onerror="this.parentNode.classList.add(\'is-empty\');this.remove()"></div>' +
       '<div class="cs_height_20"></div>' +
-      '<p class="cs_font_18 cs_primary_color mb-0">Yape: <strong>' + esc(CONFIG.yape.numero) + '</strong></p>' +
-      '<p class="cs_font_16 cs_opacity_07">' + esc(CONFIG.yape.titular) + '</p>' +
-      '<p class="cs_font_16">Yapea el monto y envíame la captura. Te confirmo y te envío el acceso.</p>' +
+      '<p class="cs_font_18 cs_primary_color mb-0">Plin: <strong>' + esc(CONFIG.pago.plin) + '</strong></p>' +
+      '<p class="cs_font_16 cs_primary_color mb-0">Transferencia ' + esc(CONFIG.pago.banco) + ': <strong>' + esc(CONFIG.pago.cuenta) + '</strong></p>' +
+      '<p class="cs_font_16 cs_primary_color mb-0">CCI: ' + esc(CONFIG.pago.cci) + '</p>' +
+      '<p class="cs_font_16 cs_opacity_07">' + esc(CONFIG.pago.titular) + '</p>' +
+      '<p class="cs_font_16">Realiza el pago y envíame la constancia. Te confirmo y te genero el acceso.</p>' +
       '<button type="button" class="cs_btn cs_style_1 cs_focus_2 border-0" data-constancia><span>Enviar constancia</span></button>';
     modal.setAttribute('data-producto', p.nombre + ' (S/ ' + p.precio + ')');
     modal.classList.add('is-open');
@@ -101,7 +106,7 @@ var CONFIG = {
       return contactar('Hola Stefany, quiero información sobre ' + c.getAttribute('data-consultar') + '.');
     }
     if (e.target.closest('[data-constancia]')) {
-      return contactar('Hola Stefany, ya hice mi Yape por ' + modal.getAttribute('data-producto') + '. Te envío la constancia.');
+      return contactar('Hola Stefany, ya hice el pago de ' + modal.getAttribute('data-producto') + '. Te envío la constancia.');
     }
     if (e.target.closest('[data-cerrar]')) modal.classList.remove('is-open');
   });

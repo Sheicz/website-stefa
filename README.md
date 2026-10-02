@@ -10,7 +10,7 @@ Web de Stefany hecha con la plantilla **Grace**, con el mismo diseño y todas su
 | Sobre mí | `sobre-mi.html` | `about.html` |
 | Talleres para empresas | `talleres-empresas.html` | `service-details-v1.html` |
 | Asesorías profesionales | `asesorias-profesionales.html` | `service-details-v1.html` |
-| Ponencias y charlas | `ponencias.html` | `service-details-v1.html` |
+| Ponencias & Charlas | `ponencias.html` | `service-details-v1.html` |
 | Colaboraciones & Marcas | `colaboraciones.html` | `service-details-v1.html` |
 | Cursos | `cursos.html` | `project.html` |
 | Curso Python y Machine Learning | `curso-python-machine-learning.html` | `project-details.html` |
@@ -23,7 +23,7 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 ## Cómo editar
 
 - **Textos:** abre la página en GitHub → lápiz ✏️ → busca el texto (Ctrl+F) → cámbialo → **Commit changes**. Busca `EDITAR` para ver lo que falta completar (años y cargos de tu trayectoria, testimonios, usuario de TikTok).
-- **Precios, Yape, correo y WhatsApp:** están todos al inicio de [`assets/js/sitio.js`](assets/js/sitio.js). Ahí pones el precio de cada curso y de la asesoría; si un precio está vacío, el botón dice "Consultar" y abre WhatsApp (o el correo si no hay WhatsApp).
+- **Precios, datos de pago, correo y WhatsApp:** están todos al inicio de [`assets/js/sitio.js`](assets/js/sitio.js). Ahí pones el precio de cada curso y de la asesoría; si un precio está vacío, el botón dice "Consultar" y abre WhatsApp (o el correo si no hay WhatsApp).
 - **Fotos:** todas las fotos de la web están en [`assets/img/estefa/`](assets/img/estefa/). Hoy son imágenes grises de ejemplo; reemplázalas subiendo tu foto **con el mismo nombre**:
 
 | Archivo | Dónde sale | Tamaño sugerido |
@@ -41,14 +41,14 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 | `clase-1.jpg` … `clase-3.jpg` | "Así son mis clases" en las páginas de cursos | 1000 × 680 |
 | `evento-1.jpg` … `evento-3.jpg` | "Momentos en mis talleres y charlas" en sobre mí | 480 × 550 |
 
-  El QR de Yape va en `assets/img/marca/yape-qr.png`.
+  El QR de Plin va en `assets/img/marca/qr-pago.png`.
 
 - **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
 - **Redes sociales:** en el pie de cada página, los íconos de TikTok, LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
 
 ## Pagos
 
-- **Hoy (Yape):** los botones "Inscribirme" y "Reservar" abren una ventana con tu QR, tu número y el monto; luego te envían la constancia por WhatsApp.
+- **Hoy (Plin o transferencia):** los botones "Inscribirme" y "Reservar" abren una ventana con tu QR de Plin, tu número, tu cuenta y el monto; luego te envían la constancia por WhatsApp.
 - **Después (pasarela):** en `assets/js/sitio.js`, pega el link de pago en `linkPago` (Mercado Pago, Culqi, Izipay, Hotmart, etc.) y el botón irá directo a pagar.
 
 ## Publicar
@@ -61,5 +61,5 @@ Cada cambio que guardes en GitHub se publica solo.
 
 ## Archivos agregados a la plantilla
 
-- `assets/js/sitio.js`: precios, Yape, correo/WhatsApp, ventana de pago y formularios.
+- `assets/js/sitio.js`: precios, datos de pago, correo/WhatsApp, ventana de pago y formularios.
 - `assets/css/marca.css`: logo en texto, empresas en texto y ventana de pago. `assets/css/style.css` no se tocó.
