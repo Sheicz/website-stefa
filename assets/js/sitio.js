@@ -7,7 +7,7 @@
 |--------------------------------------------------------------------------
 */
 var CONFIG = {
-  correo: 'stefachaf@gmail.com',
+  correo: 'stefachav@gmail.com',
   whatsapp: '', // EDITAR: código de país + número, sin espacios ni "+", ej. '51987654321'
 
   // Pago con Yape (hoy)

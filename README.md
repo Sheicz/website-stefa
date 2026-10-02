@@ -25,20 +25,24 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 
 - **Textos:** abre la página en GitHub → lápiz ✏️ → busca el texto (Ctrl+F) → cámbialo → **Commit changes**. Busca `EDITAR` para ver lo que falta completar (años y cargos de tu trayectoria, testimonios, usuario de TikTok).
 - **Precios, Yape, correo y WhatsApp:** están todos al inicio de [`assets/js/sitio.js`](assets/js/sitio.js). Ahí pones el precio de cada curso y de la asesoría; si un precio está vacío, el botón dice "Consultar" y abre WhatsApp (o el correo si no hay WhatsApp).
-- **Fotos:** reemplaza las imágenes de ejemplo de la plantilla subiendo tu archivo **con el mismo nombre**:
+- **Fotos:** todas las fotos de la web están en [`assets/img/estefa/`](assets/img/estefa/). Hoy son imágenes grises de ejemplo; reemplázalas subiendo tu foto **con el mismo nombre**:
 
-| Qué | Archivo |
-| --- | --- |
-| Tu foto principal (inicio y sobre mí) | `assets/img/hero/h2.png` |
-| Fotos de servicios en la lista del inicio | `assets/img/services/hsv_1.jpg` … `hsv_5.jpg` |
-| Fotos dentro de cada servicio | `assets/img/services/sv2.jpg` … `sv5.jpg` |
-| Cursos (slider del inicio) | `assets/img/portfolio/pt4.jpg`, `pt3.jpg`, `pt1.jpg` |
-| Cursos (página de cursos) | `assets/img/portfolio/pt10.jpg`, `pt11.jpg`, `pt12.jpg` |
-| Foto principal de cada curso | `assets/img/portfolio/pt17.jpg` |
-| Fotos de clases | `assets/img/portfolio/pt18.jpg` |
-| Cursos en "Sobre mí" | `assets/img/award/a1.jpg`, `a2.jpg`, `a3.jpg` |
-| Galería de talleres y charlas | `assets/img/gallery/g1.jpg`, `g2.jpg`, `g3.jpg` |
-| QR de Yape | `assets/img/marca/yape-qr.png` |
+| Archivo | Dónde sale | Tamaño sugerido |
+| --- | --- | --- |
+| `foto-principal.png` | Tu foto en el inicio y en sobre mí (PNG sin fondo) | 600 × 640 |
+| `servicio-talleres.jpg` | Lista de servicios del inicio | 1000 × 620 |
+| `servicio-asesorias.jpg` | Lista de servicios del inicio | 1000 × 620 |
+| `servicio-ponencias.jpg` | Lista de servicios del inicio | 1000 × 620 |
+| `servicio-colaboraciones.jpg` | Lista de servicios del inicio | 1000 × 620 |
+| `servicio-cursos.jpg` | Lista de servicios del inicio | 1000 × 620 |
+| `servicio-detalle-1.jpg` … `-4.jpg` | Las 4 tarjetas dentro de cada página de servicio | 1000 × 640 |
+| `curso-python-ml.jpg` | Portada del curso Python y Machine Learning (inicio, cursos, sobre mí y su página) | 800 × 900 |
+| `curso-python-101.jpg` | Portada del curso Python 101 | 800 × 900 |
+| `curso-python-asincrono.jpg` | Portada del curso Python asíncrono | 800 × 900 |
+| `clase-1.jpg` … `clase-3.jpg` | "Así son mis clases" en las páginas de cursos | 1000 × 680 |
+| `evento-1.jpg` … `evento-3.jpg` | "Momentos en mis talleres y charlas" en sobre mí | 480 × 550 |
+
+  El QR de Yape va en `assets/img/marca/yape-qr.png`.
 
 - **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
 - **Redes sociales:** en el pie de cada página, los íconos de TikTok, LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
