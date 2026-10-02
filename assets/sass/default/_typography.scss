@@ -1,0 +1,300 @@
+/*--------------------------------------------------------------
+1. Typography
+----------------------------------------------------------------*/
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&display=swap');
+
+body,
+html {
+  color: $secondary;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.666em;
+  overflow-x: hidden;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  color: $primary;
+  padding: 0;
+  margin: 0 0 20px 0;
+  line-height: 1.3em;
+  font-family: 'Unbounded', sans-serif;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6em;
+}
+
+ul {
+  margin: 0 0 25px 0;
+  padding-left: 20px;
+  list-style: square outside none;
+}
+
+ol {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 15px;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+address {
+  margin: 0 0 15px;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $focus;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 25px;
+
+  th {
+    font-weight: 600;
+    color: $white;
+  }
+
+  td,
+  th {
+    border-top: 1px solid #ccc;
+    padding: 11px 10px;
+  }
+}
+
+dl {
+  margin-bottom: 25px;
+
+  dt {
+    font-weight: 600;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+pre {
+  color: $white;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+kbd {
+  font-size: 100%;
+  background-color: $white;
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  color: $primary;
+}
+
+/*--------- Font size--------*/
+.cs_font_90 {
+  font-size: 90px;
+}
+
+.cs_font_70 {
+  font-size: 70px;
+}
+
+.cs_font_40 {
+  font-size: 40px;
+}
+
+.cs_font_25 {
+  font-size: 25px;
+}
+
+.cs_font_20 {
+  font-size: 20px;
+}
+
+.cs_font_18 {
+  font-size: 18px;
+}
+
+.cs_font_16 {
+  font-size: 16px;
+}
+
+.cs_font_15 {
+  font-size: 15px;
+}
+@media (max-width: 1550px) {
+  .cs_font_90 {
+    font-size: 80px;
+  }
+  .cs_font_70 {
+    font-size: 66px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .cs_font_90 {
+    font-size: 70px;
+  }
+  .cs_font_70 {
+    font-size: 56px;
+  }
+
+  .cs_font_40 {
+    font-size: 36px;
+  }
+  .cs_font_25 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cs_font_90 {
+    font-size: 70px;
+  }
+
+  .cs_font_70 {
+    font-size: 50px;
+  }
+
+  .cs_font_40 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_font_90 {
+    font-size: 60px;
+  }
+
+  .cs_font_70 {
+    font-size: 48px;
+  }
+
+  .cs_font_40 {
+    font-size: 28px;
+  }
+
+  .cs_font_25 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_font_90 {
+    font-size: 46px;
+  }
+
+  .cs_font_70 {
+    font-size: 40px;
+  }
+
+  .cs_font_25 {
+    font-size: 20px;
+  }
+
+  .cs_font_20 {
+    font-size: 18px;
+  }
+
+  .cs_font_18 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_font_16,
+  .cs_font_15 {
+    font-size: 15px;
+  }
+}
+
+/*--------- Font weight--------*/
+.cs_light {
+  font-weight: 300;
+}
+
+.cs_normal {
+  font-weight: 400;
+}
+
+.cs_medium {
+  font-weight: 500;
+}
+
+.cs_semi_bold {
+  font-weight: 600;
+}
+
+.cs_bold {
+  font-weight: 700;
+}
+
+.cs_extra_bold {
+  font-weight: 800;
+}
+
+.cs_black {
+  font-weight: 900;
+}
