@@ -16,6 +16,7 @@ window.SITIO = {
   marca: 'Stefachav',
   nombre: 'Stefa', // EDITAR: tu nombre como quieres que aparezca
   logo: 'assets/img/marca/logo.png', // si no existe, se muestra el texto de "marca"
+  logoBlanco: 'assets/img/marca/logo-blanco.png', // versión para el pie (fondo morado)
   descripcionSEO:
     'Talleres para empresas, asesorías 1:1, ponencias y cursos de consumo masivo y retail.',
 
@@ -24,6 +25,8 @@ window.SITIO = {
     whatsapp: '51900000000', // EDITAR: código de país + número, sin espacios ni "+"
     mensajeWhatsapp: 'Hola Stefa, vi tu web y quiero información sobre ',
     correo: 'hola@tucorreo.com', // EDITAR
+    usuario: '@EDITAR', // tu usuario de redes
+    ubicacion: 'Lima, Perú', // EDITAR
     redes: [
       // Borra las que no uses. Iconos: linkedin-in, instagram, tiktok, youtube, facebook-f
       { icono: 'linkedin-in', url: 'https://www.linkedin.com/in/EDITAR' },
@@ -33,11 +36,12 @@ window.SITIO = {
   },
 
   /* ---------- Pagos ----------
-   | Hoy: Yape. El botón "Pagar" abre una ventana con tu QR, número y monto,
-   | y luego envía la constancia por WhatsApp.
-   | Mañana (pasarela): cambia proveedor a 'pasarela' y pon en cada curso
-   | o servicio su "linkPago" (el link de Mercado Pago, Culqi, Izipay,
-   | Hotmart, etc.). Los que no tengan link seguirán usando Yape.
+   | Hoy: Yape. Al hacer clic en un plan o curso con precio se abre una
+   | ventana con tu QR, número y monto, y luego te envían la constancia
+   | por WhatsApp.
+   | Mañana (pasarela): cambia proveedor a 'pasarela' y pon en cada plan o
+   | curso su "linkPago" (Mercado Pago, Culqi, Izipay, Hotmart, etc.).
+   | Los que no tengan link seguirán usando Yape.
    */
   pagos: {
     proveedor: 'yape', // 'yape' o 'pasarela'
@@ -51,11 +55,10 @@ window.SITIO = {
 
   /* ---------- Portada ---------- */
   portada: {
-    saludo: '¡Hola, soy Stefa!', // título grande de la portada
-    titulo: 'Te ayudo a crecer en consumo masivo y retail',
+    saludo: '¡Hola, soy Stefa!',
     texto:
-      'Más de 5 años en el mundo laboral, trabajando en consumo masivo y retail. Hoy comparto lo que aprendí con empresas, estudiantes y profesionales a través de talleres, asesorías y cursos.',
-    foto: 'assets/img/marca/foto-portada.jpg', // tu foto (ideal vertical, fondo limpio)
+      'Especialista en consumo masivo y retail con más de 5 años de experiencia. Te ayudo con talleres, asesorías y cursos para crecer en el sector.',
+    foto: 'assets/img/marca/foto-portada.png', // tu foto (ideal PNG sin fondo, vertical)
     botonFoto: '¡Hablemos!', // círculo rosado sobre tu foto (abre WhatsApp)
     cifras: [
       // EDITAR los números que no correspondan
@@ -69,166 +72,138 @@ window.SITIO = {
   /* ---------- Sobre mí ---------- */
   sobreMi: {
     titulo: 'Conóceme más',
-    texto: [
-      'EDITAR: Cuéntale a la gente quién eres en 2 o 3 frases. Por ejemplo: soy especialista en consumo masivo y retail con más de 5 años de experiencia en empresas líderes.',
-      'He trabajado en áreas como trade marketing, categorías y ventas (EDITAR), y hoy ayudo a equipos y personas a tomar mejores decisiones con lo que aprendí en la cancha.',
-    ],
-    foto: 'assets/img/marca/foto-sobre-mi.jpg',
-    especialidades: ['Consumo masivo', 'Retail', 'EDITAR especialidad', 'EDITAR especialidad'],
+    texto:
+      'EDITAR: Soy especialista en consumo masivo y retail con más de 5 años de experiencia en empresas líderes. Hoy comparto lo que aprendí en la cancha con empresas, estudiantes y profesionales.',
   },
 
-  /* ---------- Trayectoria (logos) ----------
-   | Sube los logos a assets/img/marca/logos/ (PNG o SVG, fondo transparente).
-   | Si el logo no existe todavía, se muestra el nombre de la empresa.
+  /* ---------- Servicios ----------
+   | Aparecen en la lista "Mis servicios" y como tarjetas de precio.
+   | precio: déjalo '' para mostrar "Cotizar" (abre WhatsApp en vez de Yape).
    */
-  trayectoria: {
-    titulo: 'Mi trayectoria incluye',
-    empresas: [
+  servicios: {
+    titulo: 'Mis servicios',
+    intro: 'Experiencia real de consumo masivo y retail para tu equipo, tu evento o tu carrera.',
+    lista: [
+      {
+        id: 'talleres',
+        titulo: 'Talleres para empresas',
+        imagen: 'assets/img/marca/servicios/talleres.jpg',
+        precio: '',
+        incluye: [
+          'Capacitación in-company en consumo masivo y retail',
+          'Contenido adaptado a tu empresa',
+          'Gratis para universidades y grupos de estudio',
+        ],
+      },
+      {
+        id: 'asesorias',
+        titulo: 'Asesorías 1:1',
+        imagen: 'assets/img/marca/servicios/asesorias.jpg',
+        precio: '000', // EDITAR monto (solo el número)
+        incluye: [
+          'Para estudiantes',
+          'Para profesionales que quieren cambiar de rumbo',
+          'Plan de acción concreto',
+        ],
+        linkPago: '',
+      },
+      {
+        id: 'ponencias',
+        titulo: 'Ponencias y speaker',
+        imagen: 'assets/img/marca/servicios/ponencias.jpg',
+        precio: '',
+        incluye: ['Charlas para eventos y universidades', 'Presencial o virtual', 'Tema adaptado a tu público'],
+      },
+      {
+        id: 'colaboraciones',
+        titulo: 'Colaboraciones e influencer',
+        imagen: 'assets/img/marca/servicios/colaboraciones.jpg',
+        precio: '',
+        incluye: ['Contenido para redes', 'Alianzas con marcas', 'Propuestas a medida'],
+      },
+    ],
+    tituloPlanes: 'Trabajemos juntos',
+    subtituloPlanes: 'Haz clic en una tarjeta para reservar o cotizar.',
+  },
+
+  /* ---------- Logos (sección de clientes de la plantilla) ----------
+   | Sube los logos a assets/img/marca/logos/ (PNG o SVG en blanco, se ven
+   | sobre fondo morado). Si el logo no existe todavía, se muestra el nombre.
+   | Fila 1: empresas donde trabajaste. Fila 2: empresas que confiaron en ti.
+   */
+  logos: {
+    titulo: 'MI TRAYECTORIA',
+    fila1: [
       { nombre: 'Empresa 1', logo: 'assets/img/marca/logos/empresa-1.png' },
       { nombre: 'Empresa 2', logo: 'assets/img/marca/logos/empresa-2.png' },
       { nombre: 'Empresa 3', logo: 'assets/img/marca/logos/empresa-3.png' },
       { nombre: 'Empresa 4', logo: 'assets/img/marca/logos/empresa-4.png' },
-      { nombre: 'Empresa 5', logo: 'assets/img/marca/logos/empresa-5.png' },
     ],
-  },
-  clientes: {
-    titulo: 'Empresas e instituciones que confiaron en mí',
-    empresas: [
+    fila2: [
       { nombre: 'Cliente 1', logo: 'assets/img/marca/logos/cliente-1.png' },
       { nombre: 'Universidad 1', logo: 'assets/img/marca/logos/universidad-1.png' },
       { nombre: 'Cliente 2', logo: 'assets/img/marca/logos/cliente-2.png' },
-      { nombre: 'Cliente 3', logo: 'assets/img/marca/logos/cliente-3.png' },
       { nombre: 'Universidad 2', logo: 'assets/img/marca/logos/universidad-2.png' },
     ],
-    pregunta: '¿Tu empresa es la siguiente?',
-    boton: 'Agendar una llamada de 30 min',
   },
 
-  /* ---------- Servicios ----------
-   | Aparecen en el menú "Servicios" (título + descripción corta) y como tarjetas.
-   | icono: nombre de Font Awesome (https://fontawesome.com/search?ic=free)
-   | precio: déjalo '' para mostrar "Cotizar" en vez de un monto.
-   | destacado: true pone la etiqueta "Más popular".
-   */
-  servicios: {
-    titulo: 'Mis servicios',
-    etiquetaPlanes: 'Para empresas y personas',
-    tituloPlanes: 'Elige cómo trabajamos',
-    texto:
-      'Llevo la experiencia real de consumo masivo y retail a tu equipo, tu evento o tu carrera.',
-    lista: [
-      {
-        id: 'talleres',
-        icono: 'chalkboard-user',
-        categoria: 'Empresas',
-        titulo: 'Talleres para empresas',
-        resumen: 'Capacitación in-company en consumo masivo y retail',
-        duracion: '2 a 4 horas (EDITAR)',
-        texto: 'Talleres prácticos para equipos comerciales, de marketing y de tienda, con casos reales del sector.',
-        incluye: ['Contenido adaptado a tu empresa', 'Casos y ejercicios reales', 'Material de apoyo incluido'],
-        precio: '',
-        boton: 'Cotizar',
-        destacado: true,
-        nota: '¿Eres universidad o grupo de estudio? Para ustedes el taller es gratuito.',
-      },
-      {
-        id: 'asesorias',
-        icono: 'user-group',
-        categoria: 'Personas',
-        titulo: 'Asesorías 1:1',
-        resumen: 'Para estudiantes y profesionales que quieren cambiar de rumbo',
-        duracion: '60 minutos por videollamada (EDITAR)',
-        texto: 'Una sesión personalizada para ordenar tu siguiente paso: entrar al sector, cambiar de área o reinventarte.',
-        incluye: ['Diagnóstico de tu perfil', 'Plan de acción concreto', 'Recomendaciones de CV y LinkedIn'],
-        precio: '000', // EDITAR monto (solo el número)
-        boton: 'Reservar',
-        destacado: false,
-      },
-      {
-        id: 'ponencias',
-        icono: 'microphone',
-        categoria: 'Eventos',
-        titulo: 'Ponencias y speaker',
-        resumen: 'Charlas y conferencias para eventos y universidades',
-        duracion: '30 a 90 minutos',
-        texto: 'Charlas inspiradoras y aterrizadas sobre consumo masivo, retail y desarrollo profesional.',
-        incluye: ['Presencial o virtual', 'Tema adaptado a tu público', 'Espacio de preguntas'],
-        precio: '',
-        boton: 'Cotizar',
-        destacado: false,
-      },
-      {
-        id: 'colaboraciones',
-        icono: 'handshake',
-        categoria: 'Marcas',
-        titulo: 'Colaboraciones e influencer',
-        resumen: 'Contenido y alianzas con marcas',
-        duracion: 'Según campaña',
-        texto: 'Alianzas con marcas del mundo del consumo masivo y retail para crear contenido con propósito.',
-        incluye: ['Contenido para redes', 'Activaciones y eventos', 'Propuestas a medida'],
-        precio: '',
-        boton: 'Escríbeme',
-        destacado: false,
-      },
-    ],
-  },
-
-  /* ---------- Cursos ----------
-   | tipo: 'vivo' (curso que estás dictando) o 'grabado' (asíncrono / grabación)
-   | Si el curso tiene "linkPago" y pagos.proveedor = 'pasarela', el botón
-   | lleva directo a la pasarela.
+  /* ---------- Cursos (slider de proyectos de la plantilla) ----------
+   | etiqueta: 'En curso' o 'Grabado'. Al hacer clic se paga con Yape
+   | (o con la pasarela si tiene linkPago).
    */
   cursos: {
-    cinta: 'CURSOS · APRENDE CONMIGO', // texto de la franja en movimiento
-    titulo: 'Mis cursos',
-    texto: 'Dos cursos en marcha, y grabaciones de ediciones anteriores para que aprendas cuando quieras.',
+    cinta: 'MIS CURSOS',
     lista: [
       {
-        tipo: 'vivo',
         titulo: 'EDITAR: Curso 1',
+        etiqueta: 'En curso',
         texto: 'EDITAR: de qué trata el curso y qué vas a aprender.',
-        detalle: 'Inicio: EDITAR · 4 sesiones en vivo',
         imagen: 'assets/img/marca/cursos/curso-1.jpg',
         precio: '000',
-        boton: 'Inscribirme',
         linkPago: '',
       },
       {
-        tipo: 'vivo',
         titulo: 'EDITAR: Curso 2',
+        etiqueta: 'En curso',
         texto: 'EDITAR: de qué trata el curso y qué vas a aprender.',
-        detalle: 'Inicio: EDITAR · 4 sesiones en vivo',
         imagen: 'assets/img/marca/cursos/curso-2.jpg',
         precio: '000',
-        boton: 'Inscribirme',
         linkPago: '',
       },
       {
-        tipo: 'grabado',
         titulo: 'EDITAR: Grabación de curso anterior',
-        texto: 'Accede a todas las clases grabadas y materiales.',
-        detalle: 'Acceso inmediato · a tu ritmo',
+        etiqueta: 'Grabado · asíncrono',
+        texto: 'Todas las clases grabadas y materiales, para verlas a tu ritmo.',
         imagen: 'assets/img/marca/cursos/grabacion-1.jpg',
         precio: '000',
-        boton: 'Comprar',
         linkPago: '',
       },
     ],
   },
 
-  /* ---------- Cómo pagar ---------- */
-  comoPagar: [
-    { titulo: 'Elige', texto: 'Escoge el curso o la asesoría.' },
-    { titulo: 'Yapea', texto: 'Escanea el QR o yapea al número indicado.' },
-    { titulo: 'Envía tu constancia', texto: 'Mándame la captura por WhatsApp.' },
-    { titulo: '¡Listo!', texto: 'Te confirmo y te envío el acceso.' },
-  ],
+  /* ---------- Especialidades (sección "valores" de la plantilla) ---------- */
+  especialidades: {
+    cinta: 'CONSUMO MASIVO · RETAIL',
+    titulo: 'Mi expertise',
+    lista: [
+      { titulo: 'CONSUMO MASIVO', texto: 'EDITAR: qué haces o qué sabes en consumo masivo.' },
+      { titulo: 'RETAIL', texto: 'EDITAR: qué haces o qué sabes en retail.' },
+      { titulo: 'FORMACIÓN', texto: 'Talleres, asesorías y cursos con casos reales del sector.' },
+    ],
+  },
 
-  /* ---------- Testimonios (opcional: deja la lista vacía [] para ocultarlos) ---------- */
+  /* ---------- Testimonios (deja la lista vacía [] para ocultarlos) ---------- */
   testimonios: [
     { texto: 'EDITAR: Lo que dijo alguien de tu taller o asesoría.', autor: 'Nombre, Empresa' },
     { texto: 'EDITAR: Otro testimonio corto y concreto.', autor: 'Nombre, Universidad' },
   ],
+
+  /* ---------- Cierre ---------- */
+  cierre: {
+    titulo: '¿Tienes un proyecto en mente?',
+    texto: '¡Conversemos!',
+    boton: 'Escríbeme',
+  },
 
   /* ---------- Preguntas frecuentes ---------- */
   preguntas: [
@@ -238,7 +213,7 @@ window.SITIO = {
     },
     {
       pregunta: '¿Cómo pago un curso o una asesoría?',
-      respuesta: 'Por ahora con Yape: haz clic en el botón del curso o asesoría, yapea el monto y envíame la constancia por WhatsApp. Te confirmo y te envío el acceso.',
+      respuesta: 'Por ahora con Yape: haz clic en el curso o la asesoría, yapea el monto y envíame la constancia por WhatsApp. Te confirmo y te envío el acceso.',
     },
     {
       pregunta: '¿Las asesorías son virtuales?',
@@ -249,11 +224,4 @@ window.SITIO = {
       respuesta: 'Sí, tengo grabaciones de cursos anteriores que puedes comprar y ver a tu ritmo.',
     },
   ],
-
-  /* ---------- Cierre ---------- */
-  cierre: {
-    titulo: '¿Tienes un proyecto en mente?',
-    texto: '¡Conversemos!',
-    boton: 'Escríbeme por WhatsApp',
-  },
 };
