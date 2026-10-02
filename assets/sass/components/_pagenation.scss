@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+11. Pagination
+----------------------------------------------------------------*/
+.cs_pagenation.cs_style_1 {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 10px;
+
+  li {
+    a {
+      color: rgba($primary, 0.6);
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  li.active a {
+    color: $primary;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 20px;
+    gap: 25px;
+  }
+}

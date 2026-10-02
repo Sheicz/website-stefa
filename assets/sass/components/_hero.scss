@@ -1,0 +1,153 @@
+/*--------------------------------------------------------------
+9. Hero
+----------------------------------------------------------------*/
+.cs_hero.cs_style_1 {
+  min-height: 1000px;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 590px;
+  @media (max-width: 1400px) {
+    padding-bottom: 480px;
+    padding-top: 180px;
+    min-height: 930px;
+  }
+  @media (max-width: 1199px) {
+    position: relative;
+    padding-bottom: 0;
+  }
+
+  .cs_hero_bottom_wrap {
+    min-height: 200px;
+    @media (max-width: 1199px) {
+      min-height: initial;
+    }
+  }
+
+  .cs_funfact_wrap {
+    gap: 85px;
+    @media (max-width: 1400px) {
+      gap: 50px;
+    }
+  }
+
+  .cs_imagebox,
+  .cs_hero_bottom {
+    position: absolute;
+    bottom: -1px;
+    @media (max-width: 1199px) {
+      position: relative;
+    }
+  }
+
+  .cs_imagebox {
+    z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 1200px) {
+    .cs_funfact_wrap {
+      width: 50%;
+      gap: 0;
+
+      .cs_funfact {
+        width: 50%;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs_hero_bottom_wrap,
+    .cs_funfact_wrap {
+      width: 100%;
+    }
+  }
+}
+
+// hero 2 price/
+.cs_hero.cs_style_2 {
+  .cs_hero_title {
+    margin-bottom: 30px;
+  }
+
+  .cs_hero_subtitle {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 991px) {
+    .cs_hero_title {
+      margin-bottom: 10px;
+    }
+
+    .cs_hero_subtitle {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.cs_hero.cs_style_3 {
+  .cs_hero_title {
+    margin-bottom: 40px;
+  }
+
+  .cs_hero_text {
+    margin-bottom: 70px;
+  }
+
+  .cs_btn {
+    height: 115px;
+    width: 115px;
+    background-color: transparent;
+    border: 1px solid $focus;
+    rotate: initial;
+  }
+
+  @media (max-width: 1199px) {
+    .cs_social.cs_style_1.cs_type_1 {
+      display: none;
+    }
+  }
+  @media (max-width: 991px) {
+    .cs_hero_title,
+    .cs_hero_text {
+      margin-bottom: 30px;
+    }
+
+    .cs_btn {
+      scale: 0.7;
+      margin-left: -17px;
+    }
+  }
+}
+
+.cs_hero.cs_style_4 {
+  .cs_hero_text {
+    margin-bottom: 0;
+  }
+  .cs_hero_title {
+    margin-bottom: 30px;
+  }
+
+  .cs_btn {
+    height: 62px;
+    width: 62px;
+    background: $focus2;
+    rotate: 0deg;
+  }
+}
+
+.cs_hero.cs_style_5 {
+  .cs_hero_text {
+    margin-bottom: 0;
+  }
+  .cs_btn,
+  .cs_icon_wrap,
+  .cs_hero_title,
+  .cs_hero_text {
+    margin-bottom: 30px;
+  }
+
+  .cs_hero_subtitle {
+    margin-bottom: 20px;
+  }
+}

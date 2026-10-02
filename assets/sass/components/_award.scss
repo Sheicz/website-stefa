@@ -1,0 +1,101 @@
+/*--------------------------------------------------------------
+23. Award
+----------------------------------------------------------------*/
+.cs_award.cs_style_1 {
+  border-top: 1px solid rgba($white, 0.5);
+  padding: 45px 0;
+
+  .cs_award_thumbnail {
+    width: 30%;
+    margin-right: 130px;
+  }
+
+  .cs_award_info {
+    width: 40%;
+  }
+
+  .cs_award_date {
+    width: 20%;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 1399px) {
+    .cs_award_thumbnail {
+      margin-right: 50px;
+      width: 35%;
+    }
+
+    .cs_award_info {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    padding-bottom: 20px;
+
+    br {
+      display: none;
+    }
+
+    .cs_award_thumbnail,
+    .cs_award_info,
+    .cs_award_date {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.cs_award_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+
+  > * {
+    border-right: 1px solid rgba($white, 0.5);
+    padding: 0 30px;
+    width: 33.33%;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @media (max-width: 1399px) {
+    > * {
+      padding: 0 12px;
+      border: none;
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    column-gap: initial;
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.cs_award.cs_style_2 {
+  .cs_award_thumbnail {
+    margin-bottom: 20px;
+  }
+
+  .cs_award_title {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 1199px) {
+    .cs_award_thumbnail {
+      margin-bottom: 15px;
+    }
+
+    .cs_award_title {
+      margin-bottom: 10px;
+    }
+  }
+}

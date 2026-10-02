@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+12. About
+----------------------------------------------------------------*/
+.cs_about.cs_style_1 {
+  .cs_about_text {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1400px) {
+    .cs_font_25 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .cs_about_text {
+      margin-top: 20px;
+    }
+  }
+}
+
+.cs_about.cs_style_2 {
+  .cs_about_title {
+    margin-bottom: 100px;
+  }
+
+  .cs_imagebox {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1199px) {
+    .cs_about_title {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_imagebox {
+      margin: initial;
+      max-width: initial;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .cs_about_title {
+      margin-bottom: 30px;
+    }
+  }
+}

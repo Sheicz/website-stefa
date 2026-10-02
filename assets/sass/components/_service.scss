@@ -1,0 +1,441 @@
+/*--------------------------------------------------------------
+19. Service
+----------------------------------------------------------------*/
+.cs_service.cs_style_1,
+.cs_service.cs_style_2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+
+  .cs_service_thumbnail {
+    position: absolute;
+    z-index: 1;
+    border: 5px solid $primary;
+    opacity: 0;
+    width: 345px;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.25s ease;
+    @media (max-width: 1400px) {
+      width: 270px;
+      right: 8%;
+    }
+  }
+
+  .cs_service_title,
+  .cs_service_icon {
+    color: rgba($primary, 0.5);
+    transition: inherit;
+  }
+
+  .cs_service_icon {
+    rotate: -90deg;
+    opacity: 0.5;
+  }
+  @media (max-width: 991px) {
+    .cs_service_thumbnail {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .cs_service_title,
+    .cs_service_icon,
+    .cs_service_thumbnail {
+      opacity: 1;
+      color: $primary;
+      visibility: visible;
+    }
+
+    .cs_service_icon {
+      rotate: 0deg;
+    }
+  }
+}
+
+.cs_service.cs_style_1 {
+  border-bottom: 2px solid rgba($primary, 0.5);
+}
+
+.cs_service.cs_style_2 {
+  border-bottom: 2px solid rgba($white, 0.5);
+  .cs_service_title,
+  .cs_service_icon {
+    color: rgba(255, 255, 255, 0.5);
+    transition: inherit;
+  }
+  &:hover {
+    .cs_service_title,
+    .cs_service_icon,
+    .cs_service_thumbnail {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}
+
+.cs_service.cs_style_3 {
+  width: 320px;
+  height: 220px;
+  margin-bottom: 30px;
+
+  .cs_service_in {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-radius: inherit;
+    transition: inherit;
+  }
+
+  .cs_service_title {
+    padding-right: 70px;
+    transition: inherit;
+    bottom: 30px;
+  }
+
+  .cs_service_thumbnail {
+    border: 5px solid $primary;
+    transition: inherit;
+    scale: 0;
+    width: 275px;
+    height: 170px;
+    margin: auto;
+  }
+
+  .cs_btn {
+    height: 55px;
+    width: 55px;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+  }
+
+  &:hover {
+    z-index: 9;
+
+    .cs_service_in {
+      height: 320px;
+    }
+
+    .cs_service_thumbnail {
+      scale: 1;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.cs_service.cs_style_4 {
+  .cs_service_thumbnail {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .cs_service_date {
+    margin-bottom: 10px;
+  }
+
+  .cs_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: $focus2;
+    rotate: 0deg;
+    scale: 0;
+
+    img {
+      width: initial;
+    }
+  }
+
+  .cs_service_date {
+    margin-right: 40px;
+  }
+
+  &:hover {
+    .cs_btn {
+      scale: 1;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_btn {
+      scale: 0.8;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_service_thumbnail {
+      margin-bottom: 15px;
+    }
+
+    .cs_service_date,
+    .cs_service_title {
+      margin-bottom: 10px;
+    }
+    .cs_btn {
+      scale: 0.6;
+    }
+  }
+}
+
+.cs_service.cs_style_5 {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  gap: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 200vw;
+    background-color: #886fe3;
+    bottom: 0;
+    left: -50%;
+    z-index: 1;
+  }
+
+  .cs_service_date {
+    margin-right: 45px;
+  }
+
+  .cs_btn {
+    bottom: 30px;
+    left: -50px;
+    background: $focus2;
+  }
+
+  .cs_service_info {
+    width: 60%;
+  }
+
+  @media (max-width: 1199px) {
+    &::before {
+      display: none;
+    }
+
+    padding: 0;
+    margin-bottom: 40px;
+
+    .cs_service_info {
+      width: 100%;
+    }
+
+    .cs_btn {
+      scale: 0.7;
+      left: 0;
+      bottom: 0;
+    }
+
+    .cs_service_thumbnail,
+    .cs_service_date,
+    .cs_service_title {
+      margin-bottom: 10px;
+    }
+  }
+}
+.cs_focus_bg {
+  .cs_service.cs_style_5 {
+    .cs_service_title {
+      a {
+        &:hover {
+          color: rgba($white, 0.5);
+        }
+      }
+    }
+  }
+}
+.cs_service.cs_style_6 {
+  margin-bottom: 30px;
+  .cs_service_title {
+    margin-bottom: 10px;
+  }
+
+  .cs_service_text {
+  }
+}
+
+/*-----Service wrapper----*/
+.cs_service_wrap {
+  &.cs_space_left {
+    padding-left: 160px;
+  }
+
+  @media (min-width: 767px) {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 1199px) {
+    &.cs_space_left {
+      padding-left: 0;
+    }
+  }
+}
+
+.cs_service_wrap_2 {
+  // overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 200vw;
+    background-color: $focus;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .cs_service_wrap_in {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      position: relative;
+      width: 50%;
+      padding-top: 100px;
+      padding-left: 100px;
+      padding-bottom: 90px;
+
+      &:nth-child(2n + 1) {
+        border-right: 2px solid #886fe3;
+        padding-left: 0;
+        padding-right: 100px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #886fe3;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1399px) {
+    .cs_service_wrap_in {
+      > * {
+        padding-top: 80px;
+        padding-left: 80px;
+        padding-bottom: 70px;
+
+        &:nth-child(2n + 1) {
+          padding-left: 0;
+          padding-right: 80px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_service_wrap_in {
+      > * {
+        width: 100%;
+        padding: 0;
+        border: none;
+        margin-bottom: 40px;
+        position: initial;
+
+        &:nth-child(2n + 1) {
+          width: 100%;
+          padding: 0;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.cs_service_wrap_3 {
+  .cs_service_wrap_in {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    .cs_service:last-child {
+      margin-bottom: 0;
+      &::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.cs_service_wrap_4_outer_border {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 2px;
+    top: 0;
+    background-color: #69c6f1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    height: 100px;
+    width: calc(100% - 6px);
+    background: linear-gradient(180deg, transparent, #fff);
+    pointer-events: none;
+  }
+}
+.cs_service_wrap_4 {
+  max-height: 580px;
+  overflow-y: auto;
+  position: relative;
+  direction: rtl;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    transform: rotate(180deg);
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 125px;
+    background-color: #69c6f1;
+  }
+}
+.cs_service_wrap_4_in {
+  direction: ltr;
+  padding-left: 40px;
+}

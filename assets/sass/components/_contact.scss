@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+27. Contact
+----------------------------------------------------------------*/
+.cs_contact.cs_style_1 {
+  .cs_text_list {
+    margin-bottom: 50px;
+  }
+
+  .cs_widget_title {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 1399px) {
+    .cs_text_list {
+      margin-bottom: 30px;
+    }
+
+    .cs_contact_subtitle,
+    .cs_contact_title {
+      text-align: center;
+    }
+
+    .cs_contact_subtitle {
+      padding: 0 100px;
+    }
+
+    .cs_widget_title {
+      margin-bottom: 10px;
+    }
+
+    .cs_contact_widget_wrap .cs_contact_widget {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs_contact_subtitle,
+    .cs_contact_title {
+      text-align: initial;
+      padding: initial;
+    }
+  }
+}

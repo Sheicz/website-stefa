@@ -1,0 +1,207 @@
+/*--------------------------------------------------------------
+15. Accordion
+----------------------------------------------------------------*/
+.cs_accordians.cs_style_1 {
+  .cs_accordian {
+    border-top: 1px solid rgba($white, 0.5);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($white, 0.5);
+    }
+  }
+
+  .cs_accordian_head {
+    position: relative;
+    cursor: pointer;
+    padding: 40px 0;
+    padding-right: 100px;
+  }
+
+  .cs_accordian_title {
+    opacity: 0.5;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .cs_accordian_body {
+    display: none;
+    padding-right: 100px;
+    padding-bottom: 40px;
+  }
+
+  .cs_accordian_toggle {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 40px;
+    width: 40px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      background-color: $white;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  .cs_accordian.active {
+    .cs_accordian_body {
+      display: block;
+    }
+
+    .cs_accordian_title {
+      opacity: 1;
+    }
+
+    .cs_accordian_toggle {
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_accordian_head,
+    .cs_accordian_body {
+      padding-right: 60px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .cs_accordian_body {
+      padding-right: 0;
+    }
+  }
+}
+
+.cs_accordians.cs_style_1.cs_type_1 {
+  .cs_accordian {
+    border-top: 1px solid rgba($primary, 0.5);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($primary, 0.5);
+    }
+  }
+
+  .cs_accordian_toggle {
+    &::before,
+    &::after {
+      background-color: rgba($primary, 0.5);
+    }
+  }
+
+  .cs_accordian.active {
+    .cs_accordian_toggle {
+      &::after,
+      &::before {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.cs_accordians.cs_style_2 {
+  .cs_accordian {
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    border-radius: 40px;
+    z-index: 9;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 100%;
+      border: 2px solid rgba($white, 0.5);
+      border-radius: 40px 40px 0 0;
+      transition: all 0.4s ease;
+      border-bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  .cs_accordian_head {
+    cursor: pointer;
+    padding: 0 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .cs_accordian_body {
+    padding: 0 40px;
+    padding-bottom: 30px;
+  }
+
+  .cs_accordian_title {
+    transition: all 0.4s ease;
+    opacity: 0.5;
+  }
+
+  .cs_btn {
+    height: 60px;
+    width: 60px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    scale: 0;
+    transition: 0.4s ease;
+    rotate: 0deg;
+  }
+
+  .cs_accordian_body p {
+    max-width: 650px;
+  }
+
+  .cs_accordian.active {
+    border-color: $white;
+
+    &::after {
+      display: none;
+    }
+
+    .cs_accordian_title {
+      opacity: 1;
+    }
+
+    .cs_btn {
+      scale: 1;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_accordian_head,
+    .cs_accordian_body {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .cs_font_70 {
+      font-size: 25px;
+    }
+    .cs_font_25 {
+      font-size: 16px;
+    }
+  }
+}

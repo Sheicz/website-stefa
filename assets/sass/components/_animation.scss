@@ -1,0 +1,191 @@
+/*--------------------------------------------------------------
+21. Animation
+----------------------------------------------------------------*/
+.cs_moving_container_wrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .cs_moving_container_in {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+  }
+
+  .cs_moving_content {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+}
+
+.cs_moving_container_wrap.cs_style_1 {
+  .cs_slide_right {
+    animation: slide-right 100s linear infinite;
+
+    @keyframes slide-right {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .cs_slide_left {
+    animation: slide-left 100s linear infinite;
+
+    @keyframes slide-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  .cs_slide_up {
+    animation: slide-top 50s linear infinite;
+
+    @keyframes slide-top {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  .cs_slide_down {
+    animation: slide-down 50s linear infinite;
+
+    @keyframes slide-down {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &:hover .cs_slide_right,
+  &:hover .cs_slide_left,
+  &:hover .cs_slide_up,
+  &:hover .cs_slide_down {
+    animation-play-state: paused;
+  }
+}
+
+.cs_moving_container_wrap.cs_style_1.cs_type_1 {
+  .cs_slide_right {
+    animation-duration: 40s;
+  }
+
+  .cs_slide_left {
+    animation-duration: 40s;
+  }
+}
+
+.cs_moving_container_wrap.cs_style_1.cs_type_2 {
+  width: 50%;
+  .cs_moving_container_in {
+    display: block;
+  }
+
+  .cs_moving_content {
+    display: block;
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    width: 50%;
+    .cs_brand {
+      width: initial;
+    }
+  }
+}
+
+// Shape Animation
+
+/*-----Home one accordion shape------*/
+.cs_sprin_animation {
+  animation: spin 15s linear infinite;
+
+  &.cs_rotate_reverse {
+    left: 140px;
+    animation: spin_reverse 30s linear infinite;
+  }
+
+  &.cs_sprin_animation_10 {
+    margin: 0 50px;
+    animation: spin 10s linear infinite;
+  }
+}
+
+.cs_shape_wrap {
+  .cs_half_circle_shape:last-child {
+    left: 50px;
+  }
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.cs_half_circle_shape {
+  animation: spin 15s linear infinite;
+}
+
+.cs_animation_y {
+  animation: cs_animation_y 15s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes spin_reverse {
+  0% {
+    rotate: 360deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes cs_animation_y {
+  0%,
+  100% {
+  }
+
+  50% {
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_sprin_animation,
+  .cs_half_circle_shape {
+    scale: 0.7;
+  }
+  .cs_moving_container_wrap {
+    padding: 10px 0;
+  }
+}

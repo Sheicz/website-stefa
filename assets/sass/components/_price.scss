@@ -1,0 +1,111 @@
+/*--------------------------------------------------------------
+25. Price
+----------------------------------------------------------------*/
+.cs_price.cs_style_1 {
+  margin-bottom: 24px;
+
+  .cs_price_top {
+    padding: 50px 40px;
+  }
+
+  .cs_price_title {
+    margin-bottom: 50px;
+    transition: 0.4s ease;
+  }
+
+  .cs_price_wrap {
+    max-width: 290px;
+    height: 130px;
+    border-radius: 50%;
+  }
+
+  .cs_price_list li {
+    padding: 10px 15px;
+    border-top: 1px solid rgba($primary, 0.5);
+    padding-bottom: 15px;
+    transition: 0.4s ease;
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+
+    .cs_price_top {
+      padding: 40px 25px;
+    }
+
+    .cs_price_title {
+      margin-bottom: 25px;
+    }
+
+    .cs_price_wrap {
+      max-width: 250px;
+      height: 100px;
+      border-radius: 50px;
+    }
+  }
+  .cs_btn.cs_style_3 {
+    height: 55px;
+    width: 55px;
+    top: 20px;
+    right: 20px;
+    border: 1px solid $white;
+    scale: 0;
+    opacity: 0;
+  }
+  &:hover {
+    .cs_btn.cs_style_3 {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}
+
+.cs_price.cs_style_1.cs_type_1 {
+  border-radius: 20px;
+  .cs_btn.cs_style_3 {
+    height: 75px;
+    width: 75px;
+    top: 25px;
+    right: 25px;
+    @media (max-width: 991px) {
+      transform: scale(0.7);
+      right: 10px;
+    }
+  }
+  &:hover {
+    background-color: $focus;
+    .cs_btn.cs_style_3 {
+      scale: 1;
+      opacity: 1;
+    }
+
+    .cs_price_list li {
+      color: $white;
+      border-color: rgba($white, 0.5);
+    }
+
+    .cs_price_title {
+      color: $white;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_btn {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+.cs_grid_2 {
+  column-count: 2;
+  gap: 24px;
+
+  @media (max-width: 767px) {
+    column-count: 1;
+  }
+}

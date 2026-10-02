@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+14. CTA
+----------------------------------------------------------------*/
+.cs_cta.cs_style_1 {
+  padding: 0 20px;
+
+  .cs_cta_title,
+  .cs_cta_subtitle {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 991px) {
+    .cs_cta_title,
+    .cs_cta_subtitle {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.cs_cta.cs_style_2 {
+  .cs_cta_title {
+    margin-bottom: 20px;
+  }
+}
+
+.cs_cta.cs_style_3 {
+  background-repeat: no-repeat;
+  background-position: 50px 0;
+  min-height: 465px;
+  padding: 30px 50px;
+
+  .cs_sprin_animation {
+    left: 7%;
+    top: 30%;
+  }
+
+  @media (max-width: 1400px) {
+    background-position: -15% 100%;
+    background-size: 50%;
+
+    .cs_sprin_animation {
+      left: 30%;
+      top: 30%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .cs_sprin_animation {
+      left: 30%;
+      top: 40%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    min-height: initial;
+    background-size: 0;
+    text-align: center;
+    padding: 70px 20px;
+  }
+}
+
+.cs_cta.cs_style_3.cs_type_1 {
+  border: 2px solid $primary;
+  background-position-x: 95%;
+
+  .cs_sprin_animation {
+    left: initial;
+    right: 34%;
+  }
+}
+
+.cs_cta.cs_style_4 {
+  padding: 0 130px;
+
+  .cs_cta_title {
+    margin-bottom: 0;
+  }
+
+  .cs_cta_subtitle {
+    margin-bottom: 70px;
+  }
+
+  .cs_btn {
+    margin-bottom: 15px;
+  }
+
+  .cs_shape_anim_y {
+    left: -140px;
+    top: -70px;
+  }
+
+  .cs_shape_anim_x {
+    right: -80px;
+    bottom: -80px;
+    animation: anim-x 10s linear infinite;
+
+    @keyframes anim-x {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-30px);
+      }
+    }
+  }
+
+  .cs_cta_title,
+  .cs_cta_subtitle,
+  .cs_btn {
+    z-index: 9;
+  }
+
+  @media (max-width: 1400px) {
+    text-align: center;
+    padding: 0 30px;
+
+    .cs_cta_title,
+    .cs_cta_subtitle {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_btn {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+28. Social
+----------------------------------------------------------------*/
+.cs_social.cs_style_1 {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  a {
+    height: 40px;
+    width: 40px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    overflow: hidden;
+    color: $white;
+
+    i {
+      text-shadow: 0 40px 0 $white;
+      transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &:hover i {
+      transform: translateY(-40px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    gap: 10px;
+    a {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
+
+.cs_social.cs_style_1.cs_type_1,
+.cs_social.cs_style_1.cs_type_2 {
+  a {
+    border-color: $primary;
+    color: $primary;
+  }
+
+  i {
+    text-shadow: 0 40px 0 $primary;
+  }
+}
+
+.cs_social.cs_style_1.cs_type_1 {
+  flex-direction: column;
+}

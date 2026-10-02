@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+24. Form
+----------------------------------------------------------------*/
+.cs_newsletter.cs_style_1 {
+  input,
+  button {
+    border: none;
+    outline: none;
+  }
+
+  input {
+    background-color: transparent;
+    color: $white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($white, 0.5);
+    margin-bottom: 20px;
+
+    &:focus {
+      border-color: $white;
+    }
+
+    &::placeholder {
+      color: rgba($white, 0.5);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    padding-right: 70px;
+
+    input {
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.cs_newsletter.cs_style_1.cs_type_1 {
+  // padding-right: ;
+  input {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba($white, 0.5);
+    &:focus {
+      border-color: $white;
+    }
+  }
+}
+
+.cs_search.cs_style_1 {
+  margin-bottom: 60px;
+
+  input {
+    border: 2px solid $primary;
+    border-radius: 50px;
+    width: calc(100% - 30px);
+    padding-left: 30px;
+
+    &:focus {
+      box-shadow: 0 0 0.25rem rgba($focus2, 0.25);
+    }
+
+    &::placeholder {
+      color: rgba($primary, 0.5);
+    }
+  }
+
+  button {
+    right: 0;
+    top: 0;
+    background-color: $focus2;
+    height: 100%;
+    width: 75px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+  }
+}
+
+.cs_comment.cs_style_1 {
+  padding: 40px;
+  border-radius: 10px;
+
+  .cs_form_title {
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    border: 2px solid $white;
+    background: transparent;
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: $white;
+
+    &::placeholder {
+      color: rgba($white, 0.5);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  @media (max-width: 991px) {
+    padding: 40px 30px;
+  }
+}
+
+.cs_contact_form.cs_style_1 {
+  .form-control {
+    border: none;
+    outline: none;
+    border-radius: initial;
+    border-bottom: 2px solid $primary;
+    margin-bottom: 30px;
+    box-shadow: none;
+
+    &:focus {
+      border-color: $focus2;
+    }
+  }
+}

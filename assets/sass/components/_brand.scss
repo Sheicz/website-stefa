@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+20. Brand
+----------------------------------------------------------------*/
+.cs_brand.cs_style_1 {
+  height: 80px;
+  width: 100%;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  @media (max-width: 991px) {
+    min-width: 130px;
+    img {
+      scale: 0.8;
+    }
+  }
+}
+
+.cs_brand.cs_style_1.cs_type_1 {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.cs_brand_wrap {
+  max-height: 555px;
+  overflow: hidden;
+}
+
+.cs_moving_container_wrap.cs_style_1.cs_type_2 {
+  @media (max-width: 1200px) {
+    .cs_brand {
+      min-width: initial;
+    }
+  }
+}
