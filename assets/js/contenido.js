@@ -51,13 +51,12 @@ window.SITIO = {
 
   /* ---------- Portada ---------- */
   portada: {
-    saludo: 'Hola, soy Stefa',
+    saludo: '¡Hola, soy Stefa!', // título grande de la portada
     titulo: 'Te ayudo a crecer en consumo masivo y retail',
     texto:
       'Más de 5 años en el mundo laboral, trabajando en consumo masivo y retail. Hoy comparto lo que aprendí con empresas, estudiantes y profesionales a través de talleres, asesorías y cursos.',
     foto: 'assets/img/marca/foto-portada.jpg', // tu foto (ideal vertical, fondo limpio)
-    botonPrincipal: { texto: 'Ver servicios', link: '#servicios' },
-    botonSecundario: { texto: 'Ver cursos', link: '#cursos' },
+    botonFoto: '¡Hablemos!', // círculo rosado sobre tu foto (abre WhatsApp)
     cifras: [
       // EDITAR los números que no correspondan
       { numero: 5, sufijo: '+', texto: 'Años de experiencia' },
@@ -69,7 +68,7 @@ window.SITIO = {
 
   /* ---------- Sobre mí ---------- */
   sobreMi: {
-    titulo: 'Conóceme',
+    titulo: 'Conóceme más',
     texto: [
       'EDITAR: Cuéntale a la gente quién eres en 2 o 3 frases. Por ejemplo: soy especialista en consumo masivo y retail con más de 5 años de experiencia en empresas líderes.',
       'He trabajado en áreas como trade marketing, categorías y ventas (EDITAR), y hoy ayudo a equipos y personas a tomar mejores decisiones con lo que aprendí en la cancha.',
@@ -112,8 +111,9 @@ window.SITIO = {
    | destacado: true pone la etiqueta "Más popular".
    */
   servicios: {
-    etiqueta: 'Para empresas y personas',
-    titulo: 'Servicios',
+    titulo: 'Mis servicios',
+    etiquetaPlanes: 'Para empresas y personas',
+    tituloPlanes: 'Elige cómo trabajamos',
     texto:
       'Llevo la experiencia real de consumo masivo y retail a tu equipo, tu evento o tu carrera.',
     lista: [
@@ -179,8 +179,8 @@ window.SITIO = {
    | lleva directo a la pasarela.
    */
   cursos: {
-    etiqueta: 'Aprende a tu ritmo',
-    titulo: 'Cursos',
+    cinta: 'CURSOS · APRENDE CONMIGO', // texto de la franja en movimiento
+    titulo: 'Mis cursos',
     texto: 'Dos cursos en marcha, y grabaciones de ediciones anteriores para que aprendas cuando quieras.',
     lista: [
       {
@@ -252,8 +252,8 @@ window.SITIO = {
 
   /* ---------- Cierre ---------- */
   cierre: {
-    titulo: '¿Conversamos?',
-    texto: 'Cuéntame qué necesitas y te respondo por WhatsApp.',
+    titulo: '¿Tienes un proyecto en mente?',
+    texto: '¡Conversemos!',
     boton: 'Escríbeme por WhatsApp',
   },
 };

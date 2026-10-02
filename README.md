@@ -28,9 +28,9 @@ Mientras una imagen no exista, la web muestra un recuadro con la ruta donde subi
 
 Para subir desde GitHub: entra a la carpeta → **Add file → Upload files**.
 
-### Colores y tipografía
+### Diseño
 
-Están al inicio de [`assets/css/marca.css`](assets/css/marca.css) (variables `--m-rosa`, `--m-celeste`, `--m-acento`, `--m-oscuro`).
+Se respeta la plantilla Grace: su letra (Unbounded), sus colores (morado `#5533d8`, rosa `#fa7bd4`, celeste `#69c6f1`) y sus secciones (portada con cifras, "Conóceme más", "Mis servicios", logos en movimiento, testimonios, contacto, preguntas y pie). [`assets/css/marca.css`](assets/css/marca.css) solo agrega lo que la plantilla no traía: menú de servicios con descripción, tarjetas de servicios y cursos, ventana de pago y botón de WhatsApp.
 
 ## Pagos
 
@@ -54,5 +54,5 @@ Abre `index.html` con doble clic, o para una vista más fiel: `python3 -m http.s
 - `index.html` — estructura de la página (no hace falta tocarlo).
 - `assets/js/contenido.js` — **todo el contenido**.
 - `assets/js/render.js` — arma la página a partir del contenido.
-- `assets/css/marca.css` — estilos de la marca encima de la plantilla.
+- `assets/css/marca.css` — complementos encima de la plantilla (`assets/css/style.css` no se tocó).
 - `plantilla-inicio.html` y las demás páginas `.html` — páginas originales de la plantilla, como referencia. Se pueden borrar cuando ya no las necesites.

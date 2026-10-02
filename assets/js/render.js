@@ -1,7 +1,8 @@
 /*
 |--------------------------------------------------------------------------
-| Arma la página a partir de assets/js/contenido.js
-| No necesitas tocar este archivo para cambiar textos, precios o imágenes.
+| Arma la página a partir de assets/js/contenido.js usando el HTML de la
+| plantilla Grace. No necesitas tocar este archivo para cambiar textos,
+| precios o imágenes.
 |--------------------------------------------------------------------------
 */
 (function () {
@@ -31,6 +32,13 @@
   }
   function precio(monto) {
     return S.pagos.moneda + ' ' + monto;
+  }
+  // Botón de la plantilla (cs_btn cs_style_1). estilo: cs_focus_1 (morado), cs_focus_2 (rosa), cs_border_btn
+  function boton(texto, href, estilo, externo) {
+    return (
+      '<a class="cs_btn cs_style_1 ' + estilo + '" href="' + esc(href) + '"' +
+      (externo ? ' target="_blank" rel="noopener"' : '') + '><span>' + esc(texto) + '</span></a>'
+    );
   }
   // Imagen que, si todavía no existe, muestra un recuadro con la ruta a subir.
   function foto(src, alt, clase) {
@@ -68,10 +76,8 @@
   if (meta) meta.setAttribute('content', S.descripcionSEO);
 
   /* ---------- Logo ---------- */
-  var logoHtml =
-    '<img src="' + esc(S.logo) + '" alt="' + esc(S.marca) + '" data-falta="m_logo_text">';
-  fill('m-logo', logoHtml);
-  fill('m-logo-footer', logoHtml);
+  fill('m-logo', '<img src="' + esc(S.logo) + '" alt="' + esc(S.marca) + '" data-falta="m_logo_text">');
+  fill('m-logo-footer', '<img src="' + esc(S.logo) + '" alt="' + esc(S.marca) + '" data-falta="m_logo_text">');
 
   /* ---------- Menú ---------- */
   var subMenu = S.servicios.lista
@@ -89,59 +95,123 @@
       '<li class="menu-item-has-children m_menu_servicios"><a href="#servicios">Servicios</a><ul>' + subMenu + '</ul></li>' +
       '<li><a href="#cursos">Cursos</a></li>' +
       '<li><a href="#preguntas">Preguntas</a></li>' +
-      '<li class="m_menu_cta"><a href="' + whatsapp('') + '" target="_blank" rel="noopener">Contacto</a></li>'
+      '<li><a href="#contacto">Contacto</a></li>'
   );
 
-  /* ---------- Portada ---------- */
+  /* ---------- Portada (Hero de la plantilla) ---------- */
   var P = S.portada;
   fill(
     'm-portada',
-    '<div class="row align-items-center">' +
-      '<div class="col-lg-6">' +
-      '<p class="m_kicker">' + esc(P.saludo) + '</p>' +
-      '<h1 class="m_hero_title">' + esc(P.titulo) + '</h1>' +
-      '<p class="m_hero_text">' + esc(P.texto) + '</p>' +
-      '<div class="m_btns">' +
-      '<a class="m_btn m_btn_grad" href="' + esc(P.botonPrincipal.link) + '">' + esc(P.botonPrincipal.texto) + '</a>' +
-      '<a class="m_btn m_btn_line" href="' + esc(P.botonSecundario.link) + '">' + esc(P.botonSecundario.texto) + '</a>' +
-      '</div></div>' +
-      '<div class="col-lg-6"><div class="m_hero_photo">' + foto(P.foto, S.nombre, 'm_foto_hero') + '</div></div>' +
-      '</div>'
+    '<h1 class="cs_hero_title cs_font_90 cs_focus_color_2 cs_medium text-uppercase">' + esc(P.saludo) + '</h1>' +
+      '<h4 class="cs_hero_text cs_primary_color cs_font_25 cs_normal text-uppercase">' + esc(P.titulo) + '. ' + esc(P.texto) + '</h4>'
   );
   fill(
+    'm-portada-foto',
+    foto(P.foto, S.nombre, 'm_foto_hero position-relative') +
+      '<a href="' + whatsapp('') + '" target="_blank" rel="noopener" class="cs_btn cs_center position-absolute">' + esc(P.botonFoto) + '</a>'
+  );
+  // Cifras: dos grupos de dos, como en la plantilla
+  function cifra(c) {
+    return (
+      '<div class="cs_funfact cs_style_1"><div class="cs_funfact_info">' +
+      '<h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium"><span><span class="odometer" data-count-to="' + esc(c.numero) + '"></span>' + esc(c.sufijo) + '</span></h3>' +
+      '<p class="cs_funfact_text cs_font_18 cs_white_color">' + esc(c.texto) + '</p>' +
+      '</div></div>'
+    );
+  }
+  var mitad = Math.ceil(P.cifras.length / 2);
+  fill(
     'm-cifras',
-    P.cifras
-      .map(function (c) {
-        return (
-          '<div class="m_cifra"><div class="m_cifra_num"><span class="odometer" data-count-to="' + esc(c.numero) + '">0</span>' + esc(c.sufijo) + '</div>' +
-          '<div class="m_cifra_txt">' + esc(c.texto) + '</div></div>'
-        );
-      })
-      .join('')
+    '<div class="cs_funfact_wrap d-flex">' + P.cifras.slice(0, mitad).map(cifra).join('') + '</div>' +
+      '<div class="cs_funfact_wrap d-flex">' + P.cifras.slice(mitad).map(cifra).join('') + '</div>'
   );
 
   /* ---------- Sobre mí ---------- */
   var A = S.sobreMi;
   fill(
     'm-sobre-mi',
-    '<div class="row align-items-center">' +
-      '<div class="col-lg-5">' + foto(A.foto, S.nombre, 'm_foto_about') + '</div>' +
-      '<div class="col-lg-7">' +
-      '<h2 class="m_section_title m_white">' + esc(A.titulo) + '</h2>' +
-      A.texto.map(function (t) { return '<p class="m_about_text">' + esc(t) + '</p>'; }).join('') +
+    '<div class="row">' +
+      '<div class="col-xxl-4 col-xl-5">' +
+      '<h2 class="cs_about_title cs_font_70 cs_white_color cs_normal text-uppercase">' + esc(A.titulo) + '</h2>' +
+      foto(A.foto, S.nombre, 'm_foto_about') +
+      '</div>' +
+      '<div class="col-xxl-8 col-xl-7">' +
+      A.texto.map(function (t) { return '<p class="cs_about_text cs_font_25 cs_white_color text-uppercase cs_opacity_07 cs_line_top_1">' + esc(t) + '</p>'; }).join('') +
       '<div class="m_chips">' + A.especialidades.map(function (e) { return '<span class="m_chip">' + esc(e) + '</span>'; }).join('') + '</div>' +
       '</div></div>'
   );
 
-  /* ---------- Logos (fila que se desliza, como en la plantilla) ---------- */
+  /* ---------- Pagos: Yape hoy, pasarela mañana ---------- */
+  var productos = []; // se llena con cada cosa que se puede pagar
+  function botonPago(item, textoBoton) {
+    if (S.pagos.proveedor === 'pasarela' && item.linkPago) {
+      return boton(textoBoton, item.linkPago, 'cs_focus_1 w-100 justify-content-center', true);
+    }
+    productos.push(item);
+    return (
+      '<button type="button" class="cs_btn cs_style_1 cs_focus_1 w-100 justify-content-center border-0" data-pagar="' +
+      (productos.length - 1) + '"><span>' + esc(textoBoton) + '</span></button>'
+    );
+  }
+
+  /* ---------- Servicios: lista "Mis servicios" de la plantilla ---------- */
+  var V = S.servicios;
+  fill('m-servicios-intro', '<p class="cs_primary_color cs_font_18 cs_opacity_07 mb-0">' + esc(V.texto) + '</p><div class="cs_height_lg_20"></div>');
+  fill('m-servicios-titulo', esc(V.titulo).toUpperCase());
+  fill(
+    'm-servicios-lista',
+    V.lista
+      .map(function (s) {
+        return (
+          '<a href="#servicio-' + esc(s.id) + '" class="cs_service cs_style_1">' +
+          '<div><h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">' + esc(s.titulo) + '</h4>' +
+          '<p class="m_service_sub mb-0">' + esc(s.resumen) + '</p></div>' +
+          '<div class="cs_service_icon cs_font_25"><i class="fa-solid fa-arrow-right"></i></div>' +
+          '</a>'
+        );
+      })
+      .join('')
+  );
+
+  /* ---------- Servicios: tarjetas de planes ---------- */
+  fill(
+    'm-servicios-head',
+    '<p class="m_kicker text-center">' + esc(V.etiquetaPlanes) + '</p>' +
+      '<h2 class="cs_font_70 cs_primary_color cs_normal text-uppercase text-center">' + esc(V.tituloPlanes) + '</h2>' +
+      '<div class="cs_height_50 cs_height_lg_30"></div>'
+  );
+  fill(
+    'm-servicios',
+    V.lista
+      .map(function (s, i) {
+        var accion = s.precio
+          ? botonPago({ titulo: s.titulo, precio: s.precio, linkPago: s.linkPago }, s.boton)
+          : boton(s.boton, whatsapp(s.titulo.toLowerCase() + '.'), 'cs_border_btn w-100 justify-content-center', true);
+        var fondo = i % 2 ? 'cs_focus_bg_3' : 'cs_focus_bg_2';
+        return (
+          '<div class="col-xl-3 col-md-6" id="servicio-' + esc(s.id) + '">' +
+          '<article class="m_card' + (s.destacado ? ' m_card_featured' : '') + '">' +
+          (s.destacado ? '<span class="m_badge">Más popular</span>' : '') +
+          '<div class="m_card_icon ' + fondo + '"><i class="fa-solid fa-' + esc(s.icono) + '"></i></div>' +
+          '<p class="m_kicker">' + esc(s.categoria) + '</p>' +
+          '<h3 class="m_card_title">' + esc(s.titulo) + '</h3>' +
+          '<p class="m_card_duration">' + esc(s.duracion) + '</p>' +
+          (s.precio ? '<p class="m_card_price">' + esc(precio(s.precio)) + '</p>' : '') +
+          '<p class="m_card_text">' + esc(s.texto) + '</p>' +
+          '<ul class="m_check">' + s.incluye.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' +
+          '<div class="m_card_bottom">' + accion +
+          (s.nota ? '<a class="m_card_note" href="' + whatsapp('un taller gratuito para mi universidad o grupo de estudio.') + '" target="_blank" rel="noopener">' + esc(s.nota) + '</a>' : '') +
+          '</div></article></div>'
+        );
+      })
+      .join('')
+  );
+
+  /* ---------- Logos (sección "My clients" de la plantilla) ---------- */
   function filaLogos(empresas, direccion) {
     var items = empresas
       .map(function (e) {
-        return (
-          '<div class="cs_brand cs_style_1 m_brand">' +
-          '<img src="' + esc(e.logo) + '" alt="' + esc(e.nombre) + '" data-falta="m_brand_text">' +
-          '</div>'
-        );
+        return '<div class="cs_brand cs_style_1 m_brand"><img src="' + esc(e.logo) + '" alt="' + esc(e.nombre) + '" data-falta="m_brand_text"></div>';
       })
       .join('');
     // Se repite el bloque para que el movimiento sea continuo.
@@ -150,69 +220,32 @@
   }
   fill(
     'm-logos',
-    '<p class="m_logos_title">' + esc(S.trayectoria.titulo) + '</p>' +
+    '<div class="cs_height_135 cs_height_lg_70"></div>' +
+      '<div class="container"><h2 class="cs_white_color cs_font_70 cs_normal mb-0 text-uppercase">' + esc(S.trayectoria.titulo) + '</h2><div class="cs_height_70 cs_height_lg_40"></div></div>' +
       filaLogos(S.trayectoria.empresas, 'cs_slide_right') +
-      '<p class="m_logos_title">' + esc(S.clientes.titulo) + '</p>' +
+      '<div class="container"><div class="cs_height_70 cs_height_lg_40"></div><h3 class="cs_white_color cs_font_40 cs_normal mb-0 text-uppercase">' + esc(S.clientes.titulo) + '</h3><div class="cs_height_50 cs_height_lg_30"></div></div>' +
       filaLogos(S.clientes.empresas, 'cs_slide_left') +
-      '<div class="container text-center"><h3 class="m_logos_question">' + esc(S.clientes.pregunta) + '</h3>' +
+      '<div class="container text-center"><div class="cs_height_80 cs_height_lg_50"></div>' +
+      '<h3 class="cs_white_color cs_font_40 cs_medium">' + esc(S.clientes.pregunta) + '</h3>' +
       '<div class="m_btns justify-content-center">' +
-      '<a class="m_btn m_btn_grad" href="' + whatsapp('agendar una llamada de 30 min para mi empresa.') + '" target="_blank" rel="noopener">' + esc(S.clientes.boton) + '</a>' +
-      '<a class="m_text_link" href="' + whatsapp('') + '" target="_blank" rel="noopener">O escríbeme por WhatsApp</a>' +
-      '</div></div>'
-  );
-
-  /* ---------- Pagos: Yape hoy, pasarela mañana ---------- */
-  var productos = []; // se llena con cada cosa que se puede pagar
-  function botonPago(item, textoBoton) {
-    var usarPasarela = S.pagos.proveedor === 'pasarela' && item.linkPago;
-    if (usarPasarela) {
-      return '<a class="m_btn m_btn_grad w-100" href="' + esc(item.linkPago) + '" target="_blank" rel="noopener">' + esc(textoBoton) + '</a>';
-    }
-    productos.push(item);
-    return '<button type="button" class="m_btn m_btn_grad w-100" data-pagar="' + (productos.length - 1) + '">' + esc(textoBoton) + '</button>';
-  }
-
-  /* ---------- Servicios (tarjetas tipo "Corporativo") ---------- */
-  var V = S.servicios;
-  fill(
-    'm-servicios-head',
-    '<p class="m_kicker text-center">' + esc(V.etiqueta) + '</p>' +
-      '<h2 class="m_section_title text-center">' + esc(V.titulo) + '</h2>' +
-      '<p class="m_section_text text-center">' + esc(V.texto) + '</p>'
-  );
-  fill(
-    'm-servicios',
-    V.lista
-      .map(function (s) {
-        var boton = s.precio
-          ? botonPago({ titulo: s.titulo, precio: s.precio, linkPago: s.linkPago }, s.boton)
-          : '<a class="m_btn m_btn_line w-100" href="' + whatsapp(s.titulo.toLowerCase() + '.') + '" target="_blank" rel="noopener">' + esc(s.boton) + '</a>';
-        return (
-          '<div class="col-xl-3 col-md-6" id="servicio-' + esc(s.id) + '">' +
-          '<article class="m_card' + (s.destacado ? ' m_card_featured' : '') + '">' +
-          (s.destacado ? '<span class="m_badge">Más popular</span>' : '') +
-          '<div class="m_card_icon"><i class="fa-solid fa-' + esc(s.icono) + '"></i></div>' +
-          '<p class="m_card_kicker">' + esc(s.categoria) + '</p>' +
-          '<h3 class="m_card_title">' + esc(s.titulo) + '</h3>' +
-          '<p class="m_card_duration">' + esc(s.duracion) + '</p>' +
-          (s.precio ? '<p class="m_card_price">' + esc(precio(s.precio)) + '</p>' : '') +
-          '<p class="m_card_text">' + esc(s.texto) + '</p>' +
-          '<ul class="m_check">' + s.incluye.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
-          '<div class="m_card_bottom">' + boton +
-          (s.nota ? '<a class="m_card_note" href="' + whatsapp('un taller gratuito para mi universidad o grupo de estudio.') + '" target="_blank" rel="noopener">' + esc(s.nota) + '</a>' : '') +
-          '</div></article></div>'
-        );
-      })
-      .join('')
+      boton(S.clientes.boton, whatsapp('agendar una llamada de 30 min para mi empresa.'), 'cs_focus_2', true) +
+      '<a class="cs_text_btn_2 cs_white_color cs_font_18" href="' + whatsapp('') + '" target="_blank" rel="noopener"><span class="cs_text_btn_text">O escríbeme por WhatsApp</span></a>' +
+      '</div></div>' +
+      '<div class="cs_height_150 cs_height_lg_70"></div>'
   );
 
   /* ---------- Cursos ---------- */
   var C = S.cursos;
+  var cinta = '';
+  for (var k = 0; k < 4; k++) {
+    cinta += '<div class="d-flex align-items-center"><i class="fa-solid fa-asterisk m_cinta_star"></i><h3 class="cs_focus_color cs_font_40 cs_medium mb-0">' + esc(C.cinta) + '</h3></div>';
+  }
+  fill('m-cursos-cinta', '<div class="cs_moving_container_in"><div class="cs_moving_content cs_slide_left">' + cinta + '</div><div class="cs_moving_content cs_slide_left">' + cinta + '</div></div>');
   fill(
     'm-cursos-head',
-    '<p class="m_kicker text-center">' + esc(C.etiqueta) + '</p>' +
-      '<h2 class="m_section_title text-center">' + esc(C.titulo) + '</h2>' +
-      '<p class="m_section_text text-center">' + esc(C.texto) + '</p>'
+    '<div class="row align-items-end"><div class="col-lg-6"><h2 class="cs_font_70 cs_primary_color cs_normal text-uppercase mb-0">' + esc(C.titulo) + '</h2></div>' +
+      '<div class="col-lg-6"><p class="cs_primary_color cs_font_18 cs_opacity_07 mb-0">' + esc(C.texto) + '</p></div></div>' +
+      '<div class="cs_height_60 cs_height_lg_40"></div>'
   );
   fill(
     'm-cursos',
@@ -222,8 +255,8 @@
           '<div class="col-lg-4 col-md-6"><article class="m_course">' +
           foto(c.imagen, c.titulo, 'm_foto_course') +
           '<div class="m_course_body">' +
-          '<span class="m_tag ' + (c.tipo === 'vivo' ? 'm_tag_live' : '') + '">' + (c.tipo === 'vivo' ? 'En curso' : 'Grabado · asíncrono') + '</span>' +
-          '<h3 class="m_card_title">' + esc(c.titulo) + '</h3>' +
+          '<span class="m_tag ' + (c.tipo === 'vivo' ? 'cs_focus_bg_2' : 'cs_focus_bg_3') + '">' + (c.tipo === 'vivo' ? 'En curso' : 'Grabado · asíncrono') + '</span>' +
+          '<h3 class="m_card_title text-uppercase">' + esc(c.titulo) + '</h3>' +
           '<p class="m_card_text">' + esc(c.texto) + '</p>' +
           '<p class="m_card_duration">' + esc(c.detalle) + '</p>' +
           '<div class="m_course_foot"><span class="m_card_price">' + esc(precio(c.precio)) + '</span>' +
@@ -244,13 +277,18 @@
       .join('')
   );
 
-  /* ---------- Testimonios ---------- */
+  /* ---------- Testimonios (slider de la plantilla) ---------- */
   if (S.testimonios && S.testimonios.length) {
     fill(
       'm-testimonios',
       S.testimonios
         .map(function (t) {
-          return '<div class="col-md-6"><figure class="m_quote"><blockquote>“' + esc(t.texto) + '”</blockquote><figcaption>' + esc(t.autor) + '</figcaption></figure></div>';
+          return (
+            '<div class="slick_slide_in"><div class="cs_testimonial cs_style_1">' +
+            '<p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“' + esc(t.texto) + '”</p>' +
+            '<div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">' + esc(t.autor) + '</div>' +
+            '</div></div>'
+          );
         })
         .join('')
     );
@@ -274,22 +312,25 @@
       .join('')
   );
 
-  /* ---------- Cierre y pie ---------- */
+  /* ---------- Cierre (CTA de la plantilla) y pie ---------- */
   fill(
     'm-cierre',
-    '<h2 class="m_section_title m_white">' + esc(S.cierre.titulo) + '</h2>' +
-      '<p class="m_section_text m_white">' + esc(S.cierre.texto) + '</p>' +
-      '<a class="m_btn m_btn_white" href="' + whatsapp('') + '" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> ' + esc(S.cierre.boton) + '</a>'
+    '<h2 class="cs_cta_title cs_normal text-uppercase cs_white_color cs_font_70">' + esc(S.cierre.titulo) + '</h2>' +
+      '<h3 class="cs_cta_subtitle cs_medium cs_white_color cs_font_40">' + esc(S.cierre.texto) + '</h3>' +
+      boton(S.cierre.boton, whatsapp(''), 'cs_focus_2', true)
   );
-  var redes = S.contacto.redes
-    .map(function (r) {
-      return '<a class="cs_center cs_font_18" href="' + esc(r.url) + '" target="_blank" rel="noopener" aria-label="' + esc(r.icono) + '"><i class="fa-brands fa-' + esc(r.icono) + '"></i></a>';
-    })
-    .join('');
-  fill('m-redes', redes);
+  fill(
+    'm-redes',
+    S.contacto.redes
+      .map(function (r) {
+        return '<a class="cs_center cs_font_18" href="' + esc(r.url) + '" target="_blank" rel="noopener" aria-label="' + esc(r.icono) + '"><i class="fa-brands fa-' + esc(r.icono) + '"></i></a>';
+      })
+      .join('')
+  );
   fill(
     'm-contacto-footer',
-    '<li class="cs_font_18"><a href="' + whatsapp('') + '" target="_blank" rel="noopener">WhatsApp</a></li>' +
+    '<li class="cs_font_18">' + esc(S.nombre) + '</li>' +
+      '<li class="cs_font_18"><a href="' + whatsapp('') + '" target="_blank" rel="noopener">WhatsApp</a></li>' +
       '<li class="cs_font_18"><a href="mailto:' + esc(S.contacto.correo) + '">' + esc(S.contacto.correo) + '</a></li>'
   );
   fill(
@@ -312,14 +353,17 @@
     fill(
       'm-pago-body',
       '<p class="m_kicker">Pagar con Yape</p>' +
-        '<h3 class="m_card_title">' + esc(item.titulo) + '</h3>' +
+        '<h3 class="m_card_title text-uppercase">' + esc(item.titulo) + '</h3>' +
         '<p class="m_pago_monto">' + esc(precio(item.precio)) + '</p>' +
         foto(Y.qr, 'QR de Yape', 'm_foto_qr') +
         '<p class="m_pago_num">Yape: <strong>' + esc(Y.numero) + '</strong><br><small>' + esc(Y.titular) + '</small></p>' +
         '<ol class="m_pago_pasos"><li>Yapea el monto exacto.</li><li>Toma captura de la constancia.</li><li>Envíamela por WhatsApp con el botón de abajo.</li></ol>' +
-        '<a class="m_btn m_btn_grad w-100" target="_blank" rel="noopener" href="' +
-        whatsapp('"' + item.titulo + '". Ya hice mi Yape de ' + precio(item.precio) + ', te envío la constancia.') +
-        '"><i class="fa-brands fa-whatsapp"></i> Enviar constancia</a>'
+        boton(
+          'Enviar constancia',
+          whatsapp('"' + item.titulo + '". Ya hice mi Yape de ' + precio(item.precio) + ', te envío la constancia.'),
+          'cs_focus_2 w-100 justify-content-center',
+          true
+        )
     );
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');

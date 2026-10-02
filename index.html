@@ -10,14 +10,11 @@
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/favicon.png">
   <title>Stefachav</title>
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Plugins Links -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
   <!-- Style Links -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/marca.css">
@@ -49,97 +46,161 @@
   <!-- End Header Section -->
 
   <main>
-    <!-- Portada -->
-    <section id="inicio" class="m_hero">
-      <div class="container" id="m-portada"></div>
+    <!-- Start Hero Section -->
+    <section id="inicio" class="cs_hero cs_style_1">
       <div class="container">
-        <div class="m_cifras" id="m-cifras"></div>
+        <div class="cs_hero text-center" id="m-portada"></div>
+      </div>
+      <div class="cs_imagebox cs_style_1">
+        <div class="cs_imagebox_in" id="m-portada-foto"></div>
+      </div>
+      <div class="cs_hero_bottom cs_focus_bg cs_white_color w-100">
+        <div class="container">
+          <div class="cs_hero_bottom_wrap d-md-flex justify-content-lg-between align-items-center" id="m-cifras"></div>
+        </div>
       </div>
     </section>
+    <!-- End Hero Section -->
 
-    <!-- Logos: trayectoria y clientes -->
-    <section class="m_section m_logos" id="m-logos"></section>
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="m_section m_dark">
-      <div class="container" id="m-sobre-mi"></div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="m_section">
+    <!-- Start About Section -->
+    <section id="sobre-mi" class="cs_focus_bg cs_white_color">
+      <div class="cs_height_140 cs_height_lg_70"></div>
       <div class="container">
+        <div class="cs_about cs_style_1" id="m-sobre-mi"></div>
+      </div>
+      <div class="cs_height_130 cs_height_lg_70"></div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Start Service Section -->
+    <section id="servicios">
+      <div class="cs_height_135 cs_height_lg_60"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" id="m-servicios-intro"></div>
+          <div class="col-lg-8">
+            <h2 class="cs_font_70 cs_primary_color mb-0 cs_normal" id="m-servicios-titulo"></h2>
+            <div class="cs_height_55 cs_height_lg_25"></div>
+            <div id="m-servicios-lista"></div>
+          </div>
+        </div>
+        <div class="cs_height_120 cs_height_lg_60"></div>
         <div id="m-servicios-head"></div>
         <div class="row g-4 m_cards" id="m-servicios"></div>
       </div>
+      <div class="cs_height_150 cs_height_lg_80"></div>
     </section>
+    <!-- End Service Section -->
 
-    <!-- Cursos -->
-    <section id="cursos" class="m_section m_soft">
+    <!-- Start Brand Section -->
+    <section class="cs_focus_bg cs_white_color" id="m-logos"></section>
+    <!-- End Brand Section -->
+
+    <!-- Start Courses Section -->
+    <section id="cursos">
+      <div class="position-relative">
+        <div class="cs_focus_bg cs_white_color cs_height_30"></div>
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100" id="m-cursos-cinta"></div>
+        <div class="cs_height_200 cs_height_lg_80"></div>
+      </div>
       <div class="container">
         <div id="m-cursos-head"></div>
         <div class="row g-4 justify-content-center" id="m-cursos"></div>
         <div class="m_steps_wrap">
-          <h3 class="m_steps_title text-center">¿Cómo pagar?</h3>
+          <h3 class="cs_font_40 cs_primary_color cs_normal text-uppercase text-center">¿Cómo pagar?</h3>
+          <div class="cs_height_30"></div>
           <div class="m_steps" id="m-pasos"></div>
         </div>
       </div>
+      <div class="cs_height_150 cs_height_lg_80"></div>
     </section>
+    <!-- End Courses Section -->
 
-    <!-- Testimonios -->
-    <section id="testimonios" class="m_section">
+    <!-- Start Client Feedback Section -->
+    <section id="testimonios">
       <div class="container">
-        <p class="m_kicker text-center">Testimonios</p>
-        <h2 class="m_section_title text-center">Lo que dicen</h2>
-        <div class="row g-4" id="m-testimonios"></div>
+        <div class="row">
+          <div class="col-lg-5">
+            <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal">TESTIMONIOS</h2>
+            <div class="cs_height_lg_40"></div>
+          </div>
+          <div class="col-lg-7">
+            <div class="cs_slider cs_style_1">
+              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
+                <div class="cs_slider_wrapper" id="m-testimonios"></div>
+              </div>
+              <div class="cs_slick_arrow cs_style_3">
+                <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
+                  <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="cs_right_arrow cs_btn cs_style_2 cs_focus_1">
+                  <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- End Client Feedback Section -->
 
-    <!-- Preguntas frecuentes (acordeón de la plantilla) -->
-    <section id="preguntas" class="m_dark m_faq">
-      <div class="cs_height_100 cs_height_lg_70"></div>
+    <!-- Start Cta Section -->
+    <section id="contacto">
+      <div class="cs_height_150 cs_height_lg_80"></div>
       <div class="container">
-        <h2 class="m_section_title m_white">Preguntas frecuentes</h2>
+        <div class="cs_cta cs_style_1 text-center cs_focus_bg cs_white_color cs_radius_40">
+          <div class="cs_height_100 cs_height_lg_80"></div>
+          <div class="cs_cta_info" id="m-cierre"></div>
+          <div class="cs_height_115 cs_height_lg_90"></div>
+        </div>
       </div>
-      <div class="cs_height_40 cs_height_lg_30"></div>
+      <div class="cs_height_140 cs_height_lg_70"></div>
+    </section>
+    <!-- End Cta Section -->
+
+    <!-- Start Faq Section -->
+    <section id="preguntas" class="cs_focus_bg cs_white_color">
+      <div class="cs_height_130 cs_height_lg_70"></div>
+      <div class="container">
+        <h3 class="cs_section_title cs_white_color cs_font_70 cs_normal mb-0">PREGUNTAS FRECUENTES</h3>
+      </div>
+      <div class="cs_height_65 cs_height_lg_30"></div>
       <div class="cs_accordians cs_style_1" id="m-preguntas"></div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
-
-    <!-- Cierre -->
-    <section id="contacto" class="m_section">
-      <div class="container">
-        <div class="m_cta text-center" id="m-cierre"></div>
-      </div>
-    </section>
+    <!-- End Faq Section -->
   </main>
 
   <!-- Start Footer Section -->
-  <footer class="cs_footer cs_style_1 cs_type_1 m_dark">
-    <div class="cs_height_80 cs_height_lg_60"></div>
+  <footer class="cs_footer cs_style_1 cs_type_1 cs_focus_bg cs_white_color">
+    <div class="cs_height_100 cs_height_lg_80"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-xxl-3 col-lg-3">
           <div class="cs_widget_wrap">
             <div class="cs_site_branding m_logo_footer" id="m-logo-footer"></div>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-9">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
                 <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">Servicios</h4>
                 <ul class="cs_footer_links cs_mp_0" id="m-links-footer"></ul>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">Contacto</h4>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contacto</h4>
                 <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0" id="m-contacto-footer"></ul>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">Sígueme</h4>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Sígueme</h4>
                 <div class="cs_social cs_style_1" id="m-redes"></div>
               </div>
             </div>
