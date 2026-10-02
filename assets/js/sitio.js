@@ -125,13 +125,4 @@ var CONFIG = {
       );
     });
   });
-
-  // Formulario de novedades del pie
-  document.querySelectorAll('form[data-novedades]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var correo = new FormData(form).get('correo') || '';
-      window.location.href = 'mailto:' + CONFIG.correo + '?subject=' + encodeURIComponent('Quiero novedades de tus cursos') + '&body=' + encodeURIComponent('Mi correo: ' + correo);
-    });
-  });
 })();
