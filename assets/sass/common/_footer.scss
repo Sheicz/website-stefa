@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+  7. Footer
+----------------------------------------------------------------*/
+.cs_footer.cs_style_1 {
+  .cs_widget_wrap {
+    margin-bottom: 30px;
+  }
+
+  .cs_widget_title {
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .cs_footer_links li a {
+    color: rgba($white, 0.7);
+    &:hover {
+      color: $white;
+    }
+  }
+  .cs_social.cs_style_1 {
+    padding-top: 5px;
+  }
+
+  @media (min-width: 1400px) {
+    .cs_widget_title {
+      margin-bottom: 30px;
+    }
+
+    .cs_fooer_text {
+      padding-right: 50px;
+    }
+  }
+}
+
+.cs_footer.cs_style_1.cs_type_1 {
+  @media (min-width: 991px) {
+    .cs_widget_title {
+      margin-top: 0;
+    }
+  }
+}
+
+.cs_footer.cs_style_1.cs_type_2 {
+  .cs_social {
+    margin-top: 25px;
+  }
+  @media (min-width: 1199px) {
+    .cs_newsletter form {
+      margin-top: 50px;
+    }
+    .cs_social {
+      margin-top: 30px;
+    }
+  }
+}

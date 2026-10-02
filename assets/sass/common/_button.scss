@@ -1,0 +1,184 @@
+/*--------------------------------------------------------------
+6. Button
+----------------------------------------------------------------*/
+.cs_btn.cs_style_1 {
+  padding: 15px 50px;
+  display: inline-flex;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: 600;
+  text-shadow: 0 50px 0 currentColor;
+  overflow: hidden;
+  font-size: 20px;
+
+  span {
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &:hover span {
+    transform: translateY(-50px);
+  }
+
+  @media (max-width: 991px) {
+    padding: 5px 30px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.cs_btn.cs_style_1.cs_focus_1 {
+  background-color: $focus;
+  color: $white;
+}
+
+.cs_btn.cs_style_1.cs_focus_2 {
+  background-color: $focus2;
+  color: $primary;
+}
+
+.cs_btn.cs_style_1.cs_border_btn {
+  background-color: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+}
+
+.cs_btn.cs_style_2 {
+  height: 72px;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+
+  svg {
+    color: currentColor;
+  }
+}
+
+.cs_btn.cs_style_2.cs_focus_1 {
+  background-color: transparent;
+  color: rgba($focus, 0.5);
+  border-color: rgba($focus, 0.5);
+
+  &:hover {
+    color: $white;
+    background: $focus;
+  }
+}
+
+.cs_btn.cs_style_2.cs_focus_2 {
+  background-color: transparent;
+  color: $focus2;
+  border-color: $focus2;
+
+  &:hover {
+    color: $primary;
+    background: $focus2;
+  }
+}
+
+.cs_btn.cs_style_2.cs_focus_3 {
+  background-color: transparent;
+  color: $focus3;
+  border-color: $focus3;
+
+  &:hover {
+    color: $primary;
+    background: $focus3;
+  }
+}
+
+.cs_btn.cs_style_3 {
+  height: 100px;
+  width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  rotate: -125deg;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    transition: inherit;
+
+    &:first-child {
+      transform: translateY(-100px);
+    }
+  }
+
+  &:hover img {
+    &:first-child {
+      transform: translateY(0);
+    }
+
+    &:last-child {
+      transform: translateY(100px);
+    }
+  }
+}
+
+/*-------text button---------*/
+
+.cs_text_btn_1,
+.cs_text_btn_2 {
+  .cs_text_btn_text {
+    position: relative;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition-property: transform;
+      transition-duration: 0.6s;
+      transition-timing-function: ease-out;
+      opacity: 0.4;
+    }
+
+    &::before {
+      transform: scale(1);
+    }
+
+    &::after {
+      transform: scale(0);
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .cs_text_btn_text::after {
+      transform: scaleX(1);
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 30px;
+  }
+}
+
+.cs_text_btn_1 {
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cs_text_btn_2 .cs_text_btn_text::before {
+  transform: scale(0);
+}
