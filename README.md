@@ -1,59 +1,62 @@
 # Web de marca personal · Stefachav
 
-Página de una sola pantalla con el diseño de la plantilla **Grace**: portada, conóceme, servicios, planes, trayectoria, cursos, expertise, testimonios, contacto y preguntas.
+Web de Estefa hecha con la plantilla **Grace**, con el mismo diseño y todas sus páginas adaptadas al español con su contenido.
 
-## Cómo editar (lo único que necesitas saber)
+## Páginas
 
-**Todos los textos, precios, datos de contacto y de pago están en un solo archivo:**
-[`assets/js/contenido.js`](assets/js/contenido.js)
+| Página | Archivo | Basada en la página de la plantilla |
+| --- | --- | --- |
+| Inicio | `index.html` | `plantilla-inicio.html` (inicio original) |
+| Sobre mí | `sobre-mi.html` | `about.html` |
+| Talleres para empresas | `talleres-empresas.html` | `service-details-v1.html` |
+| Asesorías profesionales | `asesorias-profesionales.html` | `service-details-v1.html` |
+| Ponencias y speaker | `ponencias.html` | `service-details-v1.html` |
+| Colaboraciones e influencer | `colaboraciones.html` | `service-details-v1.html` |
+| Cursos | `cursos.html` | `project.html` |
+| Curso Python y Machine Learning | `curso-python-machine-learning.html` | `project-details.html` |
+| Curso Python 101 | `curso-python-101.html` | `project-details.html` |
+| Curso Python asíncrono | `curso-python-asincrono.html` | `project-details.html` |
+| Precios | `precios.html` | `pricing.html` |
+| Contacto | `contacto.html` | `contact.html` |
 
-Desde GitHub: abre el archivo → ícono del lápiz ✏️ → cambia el texto entre comillas → **Commit changes**. Si la web está conectada a Vercel o Netlify, se actualiza sola en 1 minuto.
+Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `home-v2.html`, etc.) siguen en el repo como referencia, pero ya no aparecen en el menú. Puedes borrarlas cuando quieras.
 
-Busca la palabra `EDITAR`: marca los datos que faltan completar (nombre, número de WhatsApp, Yape, precios, nombres de cursos, empresas).
+## Cómo editar
 
-### Imágenes
-
-Sube tus archivos a `assets/img/marca/` con estos nombres (o cambia el nombre en `contenido.js`):
+- **Textos:** abre la página en GitHub → lápiz ✏️ → busca el texto (Ctrl+F) → cámbialo → **Commit changes**. Busca `EDITAR` para ver lo que falta completar (años y cargos de tu trayectoria, testimonios, usuario de TikTok).
+- **Precios, Yape, correo y WhatsApp:** están todos al inicio de [`assets/js/sitio.js`](assets/js/sitio.js). Ahí pones el precio de cada curso y de la asesoría; si un precio está vacío, el botón dice "Consultar" y abre WhatsApp (o el correo si no hay WhatsApp).
+- **Fotos:** reemplaza las imágenes de ejemplo de la plantilla subiendo tu archivo **con el mismo nombre**:
 
 | Qué | Archivo |
 | --- | --- |
-| Logo (encabezado) | `assets/img/marca/logo.png` |
-| Logo en blanco (pie morado) | `assets/img/marca/logo-blanco.png` |
-| Foto de portada (PNG sin fondo) | `assets/img/marca/foto-portada.png` |
-| Fotos de servicios (aparecen al pasar el mouse) | `assets/img/marca/servicios/talleres.jpg`, `asesorias.jpg`, `ponencias.jpg`, `colaboraciones.jpg` |
+| Tu foto principal (inicio y sobre mí) | `assets/img/hero/h2.png` |
+| Fotos de servicios en la lista del inicio | `assets/img/services/hsv_1.jpg` … `hsv_5.jpg` |
+| Fotos dentro de cada servicio | `assets/img/services/sv2.jpg` … `sv5.jpg` |
+| Cursos (slider del inicio) | `assets/img/portfolio/pt4.jpg`, `pt3.jpg`, `pt1.jpg` |
+| Cursos (página de cursos) | `assets/img/portfolio/pt10.jpg`, `pt11.jpg`, `pt12.jpg` |
+| Foto principal de cada curso | `assets/img/portfolio/pt17.jpg` |
+| Fotos de clases | `assets/img/portfolio/pt18.jpg` |
+| Cursos en "Sobre mí" | `assets/img/award/a1.jpg`, `a2.jpg`, `a3.jpg` |
+| Galería de talleres y charlas | `assets/img/gallery/g1.jpg`, `g2.jpg`, `g3.jpg` |
 | QR de Yape | `assets/img/marca/yape-qr.png` |
-| Logos de empresas (en blanco) | `assets/img/marca/logos/empresa-1.png`, `cliente-1.png`, … |
-| Portadas de cursos | `assets/img/marca/cursos/curso-1.jpg`, … |
 
-Mientras una imagen no exista, la web muestra un recuadro con la ruta donde subirla (y los logos muestran el nombre de la empresa en texto).
-
-Para subir desde GitHub: entra a la carpeta → **Add file → Upload files**.
-
-### Diseño
-
-Es el mismo diseño de la plantilla Grace (compárala con `plantilla-inicio.html`): mismas secciones, letra y colores, solo con tu contenido. `assets/css/style.css` no se tocó; `assets/css/marca.css` solo agrega los recuadros de imágenes pendientes y la ventana de pago. Las estrellas y flechas de `assets/img/shapes/` y `assets/img/icons/` son reemplazos simples de los íconos que faltaban en el repo: puedes cambiarlos por los tuyos con el mismo nombre.
+- **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
+- **Redes sociales:** en el pie de cada página, los íconos de TikTok, LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
 
 ## Pagos
 
-- **Hoy (Yape):** las tarjetas de planes y los cursos con precio abren una ventana con el QR, el número y el monto; la persona yapea y te envía la constancia por WhatsApp con un mensaje ya escrito.
-- **Después (pasarela):** en `contenido.js` cambia `pagos.proveedor` a `'pasarela'` y pon el `linkPago` de cada curso o servicio (Mercado Pago, Culqi, Izipay, Hotmart, etc.). Los que tengan link irán directo a la pasarela; los demás siguen con Yape.
+- **Hoy (Yape):** los botones "Inscribirme" y "Reservar" abren una ventana con tu QR, tu número y el monto; luego te envían la constancia por WhatsApp.
+- **Después (pasarela):** en `assets/js/sitio.js`, pega el link de pago en `linkPago` (Mercado Pago, Culqi, Izipay, Hotmart, etc.) y el botón irá directo a pagar.
 
-## Publicar (la forma más rápida)
+## Publicar
 
 1. Entra a [vercel.com](https://vercel.com) (o [netlify.com](https://netlify.com)) con tu cuenta de GitHub.
-2. **Add New → Project** → elige `website-stefa` → **Deploy** (no hay que configurar nada, es HTML estático).
-3. Te da un link `….vercel.app`. Luego puedes conectar tu dominio propio en *Settings → Domains*.
+2. **Add New → Project** → elige `website-stefa` → **Deploy** (es HTML estático, no hay que configurar nada).
+3. Te da un link `….vercel.app`; luego puedes conectar tu dominio en *Settings → Domains*.
 
 Cada cambio que guardes en GitHub se publica solo.
 
-## Ver en tu computadora
+## Archivos agregados a la plantilla
 
-Abre `index.html` con doble clic, o para una vista más fiel: `python3 -m http.server` y entra a `http://localhost:8000`.
-
-## Archivos
-
-- `index.html` — estructura de la página (no hace falta tocarlo).
-- `assets/js/contenido.js` — **todo el contenido**.
-- `assets/js/render.js` — arma la página a partir del contenido.
-- `assets/css/marca.css` — mínimos agregados (imágenes pendientes y ventana de pago).
-- `plantilla-inicio.html` y las demás páginas `.html` — páginas originales de la plantilla, como referencia. Se pueden borrar cuando ya no las necesites.
+- `assets/js/sitio.js`: precios, Yape, correo/WhatsApp, ventana de pago y formularios.
+- `assets/css/marca.css`: logo en texto, empresas en texto y ventana de pago. `assets/css/style.css` no se tocó.

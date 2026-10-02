@@ -1,76 +1,35 @@
 /*
 |--------------------------------------------------------------------------
 | Mínimos agregados a la plantilla Grace (assets/css/style.css no se tocó).
-| Solo cubre: recuadros para imágenes aún no subidas, logo en texto,
-| tarjetas clicables y la ventana de pago con Yape.
+| Logo en texto, logos de empresas en texto y la ventana de pago con Yape.
 |--------------------------------------------------------------------------
 */
-html {
-  scroll-behavior: smooth;
-}
 
-/* Imagen todavía no subida: recuadro con la ruta donde subirla */
-.m_foto {
-  position: relative;
-}
-.m_foto.is-empty {
-  background: rgba(105, 198, 241, 0.25);
-}
-.m_foto.is-empty::after {
-  content: attr(data-falta);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #202020;
-  opacity: 0.6;
-  word-break: break-all;
-}
-.m_foto_hero {
-  width: 550px;
-  max-width: 100%;
-}
-.m_foto_hero.is-empty {
-  aspect-ratio: 1 / 1;
-  border-radius: 50% 50% 0 0;
-  background: rgba(250, 123, 212, 0.25);
-}
-.m_foto_curso.is-empty {
-  aspect-ratio: 16 / 9;
-}
-.m_foto_qr {
-  width: 220px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
-}
-.m_foto_qr img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Logo y logos de empresas en texto mientras no subas la imagen */
-.m_logo_text {
-  font-size: 26px;
+/* Logo en texto (reemplázalo por tu imagen cuando la tengas) */
+.m_logo {
+  font-size: 28px;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #202020;
 }
+.m_logo_light {
+  color: #fffcfc;
+}
+
+/* Nombre de empresa mientras no subas su logo */
 .m_brand_text {
-  font-size: 22px;
-  opacity: 0.7;
+  font-size: 34px;
+  font-weight: 600;
   white-space: nowrap;
+  color: #fffcfc;
+}
+@media (max-width: 991px) {
+  .m_brand_text {
+    font-size: 24px;
+  }
 }
 
-/* Tarjetas y cursos que abren el pago o WhatsApp */
-.m_clic {
-  cursor: pointer;
-}
-
-/* Ventana de pago */
+/* Ventana de pago con Yape */
 .m_modal {
   position: fixed;
   inset: 0;
@@ -106,4 +65,25 @@ html {
   background: none;
   font-size: 32px;
   line-height: 1;
+}
+.m_qr {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+.m_qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.m_qr.is-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(105, 198, 241, 0.25);
+  font-size: 13px;
+}
+.m_qr.is-empty::after {
+  content: 'Sube tu QR en assets/img/marca/yape-qr.png';
+  padding: 20px;
 }

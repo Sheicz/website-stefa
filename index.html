@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="author" content="Estefa · Stefachav">
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/favicon.png">
-  <title>Stefachav</title>
+  <title>Inicio | Stefachav</title>
   <!-- Plugins Links -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -20,24 +20,48 @@
   <link rel="stylesheet" href="assets/css/marca.css">
 </head>
 
-<!--
-  Diseño: plantilla Grace (igual que plantilla-inicio.html).
-  Los textos, precios, imágenes y datos de pago NO se editan aquí:
-  todo está en assets/js/contenido.js
--->
-
 <body>
+  <div class="cs_preloader cs_center cs_focus_bg">
+    <div class="cs_preloader_in position-relative">
+      <img class="cs_half_circle_shape cs_rotate_reverse position-absolute" src="assets/img/shapes/half_circel_3.svg" alt="Circla_shape">
+      <img class="cs_half_circle_shape position-absolute" src="assets/img/shapes/half_circel_2.svg" alt="Circla_shape">
+    </div>
+    <span class="cs_perloader_text">Cargando...</span>
+  </div>
   <!-- Start Header Section -->
   <header class="cs_site_header cs_style_1 cs_sticky_header">
     <div class="cs_main_header">
       <div class="container">
         <div class="cs_main_header_in">
           <div class="cs_main_header_left">
-            <a class="cs_site_branding" id="m-logo" href="#inicio"></a>
+            <a class="cs_site_branding m_logo" href="index.html">STEFACHAV</a>
           </div>
           <div class="cs_main_header_right">
             <div class="cs_nav">
-              <ul class="cs_nav_list" id="m-menu"></ul>
+              <ul class="cs_nav_list">
+                <li class="active"><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li class="menu-item-has-children">
+                  <a href="talleres-empresas.html">Servicios</a>
+                  <ul>
+                    <li><a href="talleres-empresas.html">Talleres para empresas</a></li>
+                    <li><a href="asesorias-profesionales.html">Asesorías profesionales</a></li>
+                    <li><a href="ponencias.html">Ponencias y speaker</a></li>
+                    <li><a href="colaboraciones.html">Colaboraciones e influencer</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="cursos.html">Cursos</a>
+                  <ul>
+                    <li><a href="cursos.html">Todos los cursos</a></li>
+                    <li><a href="curso-python-machine-learning.html">Python y Machine Learning</a></li>
+                    <li><a href="curso-python-101.html">Python 101</a></li>
+                    <li><a href="curso-python-asincrono.html">Python asíncrono</a></li>
+                  </ul>
+                </li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -47,31 +71,86 @@
   <!-- End Header Section -->
   <main>
     <!-- Start Hero Section -->
-    <section id="inicio" class="cs_hero cs_style_1">
+    <section class="cs_hero cs_style_1">
       <div class="container">
-        <div class="cs_hero text-center" id="m-portada"></div>
+        <div class="cs_hero text-center">
+          <h1 class="cs_hero_title cs_font_90 cs_focus_color_2 cs_medium">¡HOLA, SOY ESTEFA!</h1>
+          <h4 class="cs_hero_text cs_primary_color cs_font_25 cs_normal text-uppercase">Una profesional apasionada por la tecnología y la ciencia de datos, con cerca de 5 años llevando los datos al negocio en empresas como BCP, PwC y Mastercard.</h4>
+        </div>
       </div>
       <div class="cs_imagebox cs_style_1">
-        <div class="cs_imagebox_in" id="m-portada-foto"></div>
+        <div class="cs_imagebox_in">
+          <div class="cs_imagebox_bg cs_fidder_bg" data-src="assets/img/shapes/hero_bg_shape_1.svg"></div>
+          <img class="cs_imagebox_image position-relative w-100" src="assets/img/hero/h2.png" alt="Estefa">
+          <a href="contacto.html" class="cs_btn cs_center position-absolute">¡Hablemos!</a>
+          <img class="cs_imagebox_shape_1 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_6.svg" alt="">
+          <img class="cs_imagebox_shape_2 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_4.svg" alt="">
+        </div>
       </div>
       <div class="cs_hero_bottom cs_focus_bg cs_white_color w-100">
         <div class="container">
-          <div class="cs_hero_bottom_wrap d-md-flex justify-content-lg-between align-items-center" id="m-cifras"></div>
+          <div class="cs_hero_bottom_wrap d-md-flex justify-content-lg-between align-items-center">
+            <div class="cs_funfact_wrap d-flex">
+              <div class="cs_funfact cs_style_1">
+                <div class="cs_funfact_info">
+                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
+                    <span><span class="odometer" data-count-to="5"></span>+</span>
+                  </h3>
+                  <p class="cs_funfact_text cs_font_18 cs_white_color">Años de<br> experiencia</p>
+                </div>
+              </div>
+              <div class="cs_funfact cs_style_1">
+                <div class="cs_funfact_info">
+                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
+                    <span><span class="odometer" data-count-to="200"></span>+</span>
+                  </h3>
+                  <p class="cs_funfact_text cs_font_18 cs_white_color">Alumnos<br> formados</p>
+                </div>
+              </div>
+            </div>
+            <div class="cs_funfact_wrap d-flex">
+              <div class="cs_funfact cs_style_1">
+                <div class="cs_funfact_info">
+                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
+                    <span><span class="odometer" data-count-to="10"></span>K+</span>
+                  </h3>
+                  <p class="cs_funfact_text cs_font_18 cs_white_color">Seguidores<br> en TikTok</p>
+                </div>
+              </div>
+              <div class="cs_funfact cs_style_1">
+                <div class="cs_funfact_info">
+                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
+                    <span><span class="odometer" data-count-to="2"></span></span>
+                  </h3>
+                  <p class="cs_funfact_text cs_font_18 cs_white_color">Cursos<br> activos</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- End Hero Section -->
     <!-- Start About Section -->
-    <section id="sobre-mi" class="cs_focus_bg cs_white_color">
+    <section class="cs_focus_bg cs_white_color">
       <div class="cs_height_140 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_about cs_style_1" id="m-sobre-mi"></div>
+        <div class="cs_about cs_style_1">
+          <div class="row">
+            <div class="col-xxl-4 col-xl-5">
+              <h2 class="cs_about_title cs_font_70 cs_white_color cs_normal mb-0">CONÓCEME MÁS</h2>
+            </div>
+            <div class="col-xxl-8 col-xl-7">
+              <p class="cs_about_text cs_font_25 cs_white_color text-uppercase cs_opacity_07 cs_line_top_1 mb-0">Soy data scientist y he trabajado en BCP, PwC, Belcorp, Alicorp, Tottus y Mastercard. Me especializo en consumo masivo y retail, y hoy comparto lo que sé en cursos, talleres y charlas para que más personas usen los datos y la tecnología a su favor.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cs_height_130 cs_height_lg_70"></div>
     </section>
     <!-- End About Section -->
     <!-- Start Service Section -->
-    <section id="servicios">
+    <section>
       <div class="cs_height_135 cs_height_lg_60"></div>
       <div class="container">
         <div class="row">
@@ -81,50 +160,153 @@
                 <img src="assets/img/shapes/star_shape_3.svg" alt="">
               </div>
               <div class="cs_height_60"></div>
-              <p class="cs_primary_color cs_font_18 cs_opacity_07 mb-0" id="m-servicios-intro"></p>
+              <p class="cs_primary_color cs_font_18 cs_opacity_07 mb-0">Datos y tecnología<br> para tu equipo y tu carrera</p>
               <div class="cs_height_lg_20"></div>
             </div>
           </div>
           <div class="col-lg-8">
-            <h2 class="cs_font_70 cs_primary_color mb-0 cs_normal" id="m-servicios-titulo"></h2>
+            <h2 class=" cs_font_70 cs_primary_color  mb-0 cs_normal">MIS SERVICIOS</h2>
             <div class="cs_height_55 cs_height_lg_25"></div>
-            <div id="m-servicios"></div>
+            <a href="talleres-empresas.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
+              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Talleres para empresas</h4>
+              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
+                <img class="h-100 w-100" src="assets/img/services/hsv_1.jpg" alt="Talleres para empresas">
+              </div>
+              <div class="cs_service_icon">
+                <img src="assets/img/icons/arrow.svg" alt="flecha">
+              </div>
+            </a>
+            <a href="asesorias-profesionales.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
+              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Asesorías profesionales</h4>
+              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
+                <img class="h-100 w-100" src="assets/img/services/hsv_2.jpg" alt="Asesorías profesionales">
+              </div>
+              <div class="cs_service_icon">
+                <img src="assets/img/icons/arrow.svg" alt="flecha">
+              </div>
+            </a>
+            <a href="ponencias.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
+              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Ponencias y speaker</h4>
+              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
+                <img class="h-100 w-100" src="assets/img/services/hsv_3.jpg" alt="Ponencias y speaker">
+              </div>
+              <div class="cs_service_icon">
+                <img src="assets/img/icons/arrow.svg" alt="flecha">
+              </div>
+            </a>
+            <a href="colaboraciones.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
+              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Colaboraciones e influencer</h4>
+              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
+                <img class="h-100 w-100" src="assets/img/services/hsv_4.jpg" alt="Colaboraciones e influencer">
+              </div>
+              <div class="cs_service_icon">
+                <img src="assets/img/icons/arrow.svg" alt="flecha">
+              </div>
+            </a>
+            <a href="cursos.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
+              <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Cursos de Python y Machine Learning</h4>
+              <div class="cs_service_thumbnail cs_parallax_mousemove_follow">
+                <img class="h-100 w-100" src="assets/img/services/hsv_5.jpg" alt="Cursos de Python y Machine Learning">
+              </div>
+              <div class="cs_service_icon">
+                <img src="assets/img/icons/arrow.svg" alt="flecha">
+              </div>
+            </a>
           </div>
         </div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
     </section>
     <!-- End Service Section -->
-    <!-- Start Price Section (de pricing.html) -->
-    <section id="planes">
-      <div class="container">
-        <div class="cs_hero_text text-center" id="m-planes-titulo"></div>
-        <div class="cs_height_80 cs_height_lg_50"></div>
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <div class="cs_grid_2 cs_price_wrap" id="m-planes"></div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_150 cs_height_lg_50"></div>
-    </section>
-    <!-- End Price Section -->
     <!-- Start Brand Section -->
     <section class="cs_focus_bg cs_white_color">
       <div class="cs_height_135 cs_height_lg_70"></div>
       <div class="container">
-        <h2 class="cs_white_color cs_font_70 cs_normal mb-0" id="m-logos-titulo"></h2>
+        <h2 class="cs_white_color cs_font_70 cs_normal mb-0">MI TRAYECTORIA</h2>
         <div class="cs_height_100 cs_height_lg_50"></div>
       </div>
-      <div id="m-logos"></div>
+      <div>
+        <div class="cs_moving_container_wrap cs_style_1">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_right">
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">BCP</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">PwC</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Mastercard</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Alicorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Belcorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Tottus</span></div>
+            </div>
+            <div class="cs_moving_content cs_slide_right">
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">BCP</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">PwC</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Mastercard</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Alicorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Belcorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Tottus</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_height_70 cs_height_lg_0"></div>
+        <div class="cs_moving_container_wrap cs_style_1">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Alicorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Belcorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Tottus</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">BCP</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">PwC</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Mastercard</span></div>
+            </div>
+            <div class="cs_moving_content cs_slide_left">
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Alicorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Belcorp</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Tottus</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">BCP</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">PwC</span></div>
+              <div class="cs_brand cs_style_1"><span class="m_brand_text">Mastercard</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="cs_height_200 cs_height_lg_50"></div>
     </section>
     <!-- End Brand Section -->
-    <!-- Start Portfolio Section (cursos) -->
-    <section id="cursos">
+    <!-- Start Portfolio Section -->
+    <section>
       <div class="position-relative">
         <div class="cs_focus_bg cs_white_color cs_height_30"></div>
-        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100" id="m-cursos-cinta"></div>
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+            </div>
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="cs_height_200 cs_height_lg_80"></div>
         <div class="cs_height_50"></div>
       </div>
@@ -133,7 +315,44 @@
           <div class="cs_project_slider_in">
             <div class="cs_slider cs_style_1 position-relative">
               <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
-                <div class="cs_slider_wrapper" id="m-cursos"></div>
+                <div class="cs_slider_wrapper">
+                  <div class="slick_slide_in">
+                    <div class="cs_portfolio cs_style_1 cs_transition_4">
+                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="curso-python-machine-learning.html">
+                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt4.jpg" alt="Python y Machine Learning">
+                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg position-absolute bottom-0 cs_normal w-100 mb-0">Aprende a analizar datos y construir tus primeros modelos de machine learning con Python, con casos reales de consumo masivo y retail.</p>
+                      </a>
+                      <div class="cs_portfolio_info">
+                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="curso-python-machine-learning.html">Python y Machine Learning</a></h3>
+                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">En vivo · <span data-precio="python-ml">Consultar</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick_slide_in">
+                    <div class="cs_portfolio cs_style_1 cs_transition_4">
+                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="curso-python-101.html">
+                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt3.jpg" alt="Python 101">
+                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg position-absolute bottom-0 cs_normal w-100 mb-0">Tu primer paso en programación: aprende Python desde cero, sin experiencia previa, con ejercicios prácticos.</p>
+                      </a>
+                      <div class="cs_portfolio_info">
+                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="curso-python-101.html">Python 101</a></h3>
+                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">En vivo · <span data-precio="python-101">Consultar</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick_slide_in">
+                    <div class="cs_portfolio cs_style_1 cs_transition_4">
+                      <a class="cs_portfolio_thumbnail d-block position-relative cs_zoom" href="curso-python-asincrono.html">
+                        <img class="w-100 cs_zoom_in" src="assets/img/portfolio/pt1.jpg" alt="Python asíncrono">
+                        <p class="cs_portfolio_desc cs_transition_4 cs_font_18 cs_white_color cs_focus_bg position-absolute bottom-0 cs_normal w-100 mb-0">Las clases grabadas de mis cursos de Python para que aprendas a tu ritmo, cuando quieras y desde donde estés.</p>
+                      </a>
+                      <div class="cs_portfolio_info">
+                        <h3 class="cs_portfolio_title cs_font_25 cs_primary_color text-uppercase cs_normal"><a href="curso-python-asincrono.html">Python asíncrono</a></h3>
+                        <p class="cs_portfolio_subtitle cs_font_18 mb-0 cs_primary_color cs_opacity_07">Grabado · <span data-precio="python-asincrono">Consultar</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="cs_slick_arrow cs_style_1">
                   <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
                     <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,24 +373,129 @@
       <div class="cs_height_200 cs_height_lg_65"></div>
     </section>
     <!-- End Portfolio Section -->
-    <!-- Start Values Section (especialidades) -->
+    <!-- Start Values Section -->
     <section class="cs_focus_bg cs_white_color">
       <div class="position-relative">
-        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_2 cs_rotate_3 cs_height_100" id="m-cinta-2"></div>
-        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100" id="m-cinta-3"></div>
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_2 cs_rotate_3 cs_height_100">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+            </div>
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_moving_container_wrap cs_style_1 cs_type_1 cs_focus_bg_3 cs_rotate_2 cs_height_100">
+          <div class="cs_moving_container_in">
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+            </div>
+            <div class="cs_moving_content cs_slide_left">
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="cs_focus_bg cs_white_color cs_height_80"></div>
         <div class="cs_height_200 cs_height_lg_75"></div>
       </div>
       <div class="container">
-        <h3 class="cs_section_title cs_white_color cs_font_40 cs_normal mb-0" id="m-expertise-titulo"></h3>
+        <h3 class="cs_section_title cs_white_color cs_font_40 cs_normal mb-0">Mi expertise</h3>
         <div class="cs_height_65 cs_height_lg_30"></div>
-        <div class="cs_accordians cs_style_2" id="m-expertise"></div>
+        <div class="cs_accordians cs_style_2">
+          <div class="cs_accordian">
+            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">CIENCIA DE DATOS</h2>
+              <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+              </a>
+            </div>
+            <div class="cs_accordian_body">
+              <div class="d-flex justify-content-end">
+                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Convierto datos en decisiones de negocio: análisis, indicadores y modelos que se usan de verdad.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_accordian">
+            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">MACHINE LEARNING</h2>
+              <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+              </a>
+            </div>
+            <div class="cs_accordian_body">
+              <div class="d-flex justify-content-end">
+                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Modelos predictivos aplicados a ventas, clientes y operación, explicados de forma simple.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_accordian active">
+            <div class="cs_accordian_head d-flex justify-content-between align-items-center">
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">CONSUMO MASIVO Y RETAIL</h2>
+              <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+                <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
+              </a>
+            </div>
+            <div class="cs_accordian_body">
+              <div class="d-flex justify-content-end">
+                <p class="cs_white_color text-uppercase cs_font_25 mb-0">Mi experiencia está en el sector: conozco sus datos, sus retos y cómo generar impacto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
     </section>
     <!-- End Values Section -->
     <!-- Start Client Feetback Section -->
-    <section id="testimonios">
+    <section>
       <div class="cs_height_150 cs_height_lg_60"></div>
       <div class="container">
         <div class="row">
@@ -181,24 +505,37 @@
                 <img src="assets/img/shapes/star_shape_2.svg" alt="">
               </div>
               <div class="cs_height_100"></div>
-              <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal justify-self-end">TESTIMONIOS</h2>
+              <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal justify-self-end">LO QUE DICEN DE MÍ</h2>
             </div>
           </div>
           <div class="col-lg-7">
             <div class="cs_slider cs_style_1">
               <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
-                <div class="cs_slider_wrapper" id="m-testimonios"></div>
+                <div class="cs_slider_wrapper">
+                  <div class="slick_slide_in">
+                    <div class="cs_testimonial cs_style_1">
+                      <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“EDITAR: aquí va el testimonio de un alumno de tus cursos.”</p>
+                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">NOMBRE, CURSO</div>
+                    </div>
+                  </div>
+                  <div class="slick_slide_in">
+                    <div class="cs_testimonial cs_style_1">
+                      <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“EDITAR: aquí va el testimonio de una empresa de tus talleres.”</p>
+                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">NOMBRE, EMPRESA</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="cs_slick_arrow cs_style_3">
                 <div class="cs_left_arrow cs_btn cs_style_2 cs_focus_1">
                   <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
-                  </svg>
+                      <path d="M12.2261 25.6484H13.6457C13.6457 23.1184 12.7071 17.3731 4.87373 13.7213L27.2972 13.6924V12.2488L4.87373 12.2776C12.7071 8.62637 13.6457 2.88044 13.6457 0.351074L12.2261 0.351074C12.2261 2.91477 11.1035 9.21242 0.702637 12.3064V13.6924C11.1035 16.7864 12.2261 23.0841 12.2261 25.6484Z" fill="currentColor" />
+                    </svg>
                 </div>
                 <div class="cs_right_arrow cs_btn cs_style_2 cs_focus_1">
                   <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
-                  </svg>
+                      <path d="M15.7739 0.351629H14.3543C14.3543 2.88161 15.2929 8.62692 23.1263 12.2787L0.70277 12.3076V13.7512L23.1263 13.7224C15.2929 17.3736 14.3543 23.1196 14.3543 25.6489H15.7739C15.7739 23.0852 16.8965 16.7876 27.2974 13.6936V12.3076C16.8965 9.21359 15.7739 2.91593 15.7739 0.351629Z" fill="currentColor" />
+                    </svg>
                 </div>
               </div>
             </div>
@@ -208,12 +545,16 @@
     </section>
     <!-- End Client Feetback Section -->
     <!-- Start Cta Section -->
-    <section id="contacto">
+    <section>
       <div class="cs_height_150 cs_height_lg_80"></div>
       <div class="container">
         <div class="cs_cta cs_style_1 text-center cs_focus_bg cs_white_color cs_radius_40">
           <div class="cs_height_100 cs_height_lg_80"></div>
-          <div class="cs_cta_info" id="m-cierre"></div>
+          <div class="cs_cta_info">
+            <h2 class="cs_cta_title cs_normal text-uppercase cs_white_color cs_font_70">¿TIENES UN PROYECTO EN MENTE?</h2>
+            <h3 class="cs_cta_subtitle cs_medium cs_white_color cs_font_40">¡Conversemos!</h3>
+            <a class="cs_btn cs_style_1 cs_focus_2" href="contacto.html"><span>Contáctame</span></a>
+          </div>
           <div class="cs_height_115 cs_height_lg_90"></div>
         </div>
       </div>
@@ -225,12 +566,57 @@
       <div class="cs_height_130 cs_height_lg_70"></div>
       <div class="container d-flex justify-content-between align-items-center">
         <div class="cs_sprin_animation">
-          <img src="assets/img/shapes/star_shape_1.svg" alt="star-shape">
+          <img src="assets/img/shapes/star_shape_1.svg" alt="">
         </div>
         <h3 class="cs_section_title cs_white_color cs_font_70 cs_normal mb-0">PREGUNTAS</h3>
       </div>
       <div class="cs_height_65 cs_height_lg_30"></div>
-      <div class="cs_accordians cs_style_1" id="m-preguntas"></div>
+      <div class="cs_accordians cs_style_1">
+        <div class="cs_accordian">
+          <div class="container">
+            <div class="cs_accordian_head">
+              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">¿Los talleres para universidades tienen costo?</h4>
+              <span class="cs_accordian_toggle"></span>
+            </div>
+            <div class="cs_accordian_body">
+              <p class="mb-0 cs_white_color cs_font_18">No. Los talleres para universidades y grupos de estudio son gratuitos. Escríbeme para coordinar la fecha.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs_accordian active">
+          <div class="container">
+            <div class="cs_accordian_head">
+              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">¿Cómo pago un curso o una asesoría?</h4>
+              <span class="cs_accordian_toggle"></span>
+            </div>
+            <div class="cs_accordian_body">
+              <p class="mb-0 cs_white_color cs_font_18">Por ahora con Yape: haz clic en “Inscribirme”, yapea el monto y envíame la constancia. Te confirmo y te envío el acceso.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs_accordian">
+          <div class="container">
+            <div class="cs_accordian_head">
+              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">¿Necesito saber programar para llevar tus cursos?</h4>
+              <span class="cs_accordian_toggle"></span>
+            </div>
+            <div class="cs_accordian_body">
+              <p class="mb-0 cs_white_color cs_font_18">Para Python 101 no: empezamos desde cero. Para Python y Machine Learning te recomiendo tener bases de Python.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs_accordian">
+          <div class="container">
+            <div class="cs_accordian_head">
+              <h4 class="cs_accordian_title cs_font_25 cs_white_color cs_normal mb-0">¿Puedo llevar un curso si no llego a las clases en vivo?</h4>
+              <span class="cs_accordian_toggle"></span>
+            </div>
+            <div class="cs_accordian_body">
+              <p class="mb-0 cs_white_color cs_font_18">Sí. Tengo el curso de Python asíncrono con clases grabadas para que aprendas a tu ritmo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Faq Section -->
   </main>
@@ -241,33 +627,47 @@
       <div class="row">
         <div class="col-xxl-3 col-lg-3">
           <div class="cs_widget_wrap">
-            <div class="cs_site_branding" id="m-logo-footer"></div>
+            <div class="cs_site_branding m_logo m_logo_light">STEFACHAV</div>
           </div>
         </div>
         <div class="col-lg-9">
           <div class="row">
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">links</h4>
-                <ul class="cs_footer_links cs_mp_0" id="m-links-footer"></ul>
+                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">enlaces</h4>
+                <ul class="cs_footer_links cs_mp_0">
+                  <li><a class="cs_font_18 cs_text_btn_2" href="sobre-mi.html"><span class="cs_text_btn_text">Sobre mí</span></a></li>
+                  <li><a class="cs_font_18 cs_text_btn_2" href="talleres-empresas.html"><span class="cs_text_btn_text">Servicios</span></a></li>
+                  <li><a class="cs_font_18 cs_text_btn_2" href="cursos.html"><span class="cs_text_btn_text">Cursos</span></a></li>
+                  <li><a class="cs_font_18 cs_text_btn_2" href="precios.html"><span class="cs_text_btn_text">Precios</span></a></li>
+                  <li><a class="cs_font_18 cs_text_btn_2" href="#preguntas"><span class="cs_text_btn_text">Preguntas</span></a></li>
+                </ul>
               </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">ubicación</h4>
-                <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0" id="m-ubicacion"></p>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">UBICACIÓN</h4>
+                <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">Lima, Perú</p>
               </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
                 <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">contacto</h4>
-                <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0" id="m-contacto-footer"></ul>
+                <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
+              <li class="cs_font_18">Estefa</li>
+              <li class="cs_font_18"><a data-correo href="mailto:fachaf@gmail.com">fachaf@gmail.com</a></li>
+              <li class="cs_font_18">TikTok: @EDITAR</li>
+                </ul>
               </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">sígueme</h4>
-                <div class="cs_social cs_style_1" id="m-redes"></div>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">SÍGUEME</h4>
+                <div class="cs_social cs_style_1">
+              <a class="cs_center cs_font_18" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a class="cs_center cs_font_18" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="cs_center cs_font_18" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -277,9 +677,8 @@
     <div class="cs_height_60 cs_height_lg_50"></div>
   </footer>
   <!-- End Footer Section -->
-
-  <!-- Ventana de pago con Yape (se abre desde los planes y los cursos) -->
-  <div class="m_modal" id="m-pago" aria-hidden="true" role="dialog" aria-modal="true">
+  <!-- Ventana de pago con Yape (se configura en assets/js/sitio.js) -->
+  <div class="m_modal" id="m-pago" role="dialog" aria-modal="true">
     <div class="m_modal_bg" data-cerrar></div>
     <div class="m_modal_box cs_radius_20">
       <button type="button" class="m_modal_close" data-cerrar aria-label="Cerrar">&times;</button>
@@ -287,24 +686,13 @@
     </div>
   </div>
 
-  <!-- Scripts: primero el contenido, luego el armado, luego la plantilla -->
-  <script src="assets/js/contenido.js"></script>
-  <script src="assets/js/render.js"></script>
+  
+  <!-- Scripts -->
   <script src="assets/js/plugins/jquery-3.6.0.min.js"></script>
   <script src="assets/js/plugins/slick.min.js"></script>
   <script src="assets/js/plugins/odometer.min.js"></script>
   <script src="assets/js/plugins/isotope.pkg.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    // Muestra las cifras de la portada apenas carga la página.
-    jQuery(window).on('load', function () { jQuery(window).trigger('scroll'); });
-    // En celular, cierra el menú al tocar una opción.
-    jQuery(document).on('click', '.cs_nav_list a[href^="#"]', function () {
-      if (window.innerWidth < 1200 && jQuery(this).attr('href') !== '#servicios') {
-        jQuery('.cs_menu_toggle').removeClass('cs_toggle_active');
-        jQuery('.cs_nav_list').slideUp();
-      }
-    });
-  </script>
+  <script src="assets/js/sitio.js"></script>
 </body>
 </html>
