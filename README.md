@@ -22,7 +22,7 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 
 ## Cómo editar
 
-- **Textos:** abre la página en GitHub → lápiz ✏️ → busca el texto (Ctrl+F) → cámbialo → **Commit changes**. Busca `EDITAR` para ver lo que falta completar (años y cargos de tu trayectoria, testimonios, usuario de TikTok).
+- **Textos:** abre la página en GitHub → lápiz ✏️ → busca el texto (Ctrl+F) → cámbialo → **Commit changes**. Busca `EDITAR` para ver lo que falta completar (años y cargos de tu trayectoria y testimonios).
 - **Precios, datos de pago, correo y WhatsApp:** están todos al inicio de [`assets/js/sitio.js`](assets/js/sitio.js). Ahí pones el precio de cada curso y de la asesoría; si un precio está vacío, el botón dice "Consultar" y abre WhatsApp (o el correo si no hay WhatsApp).
 - **Fotos:** todas las fotos de la web están en [`assets/img/estefa/`](assets/img/estefa/). Hoy son imágenes grises de ejemplo; reemplázalas subiendo tu foto **con el mismo nombre**:
 
@@ -44,7 +44,7 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
   El QR de Plin va en `assets/img/marca/qr-pago.png`.
 
 - **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
-- **Redes sociales:** en el pie de cada página, los íconos de TikTok, LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
+- **Redes sociales:** en el pie de cada página, TikTok ya apunta a @Stefachav; los íconos de LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
 
 ## Pagos
 
