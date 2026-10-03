@@ -27,7 +27,7 @@ var CONFIG = {
   productos: {
     'python-ml': { nombre: 'Curso Python y Machine Learning', precio: '', linkPago: '' },
     'python-101': { nombre: 'Curso Python 101', precio: '', linkPago: '' },
-    'python-asincrono': { nombre: 'Curso de Python asíncrono (grabado)', precio: '', linkPago: '' },
+    'python-asincrono': { nombre: 'Python asíncrono (mini clases grabadas)', precio: '', linkPago: '' },
     'asesoria': { nombre: 'Asesoría profesional', precio: '', linkPago: '' },
   },
 };
