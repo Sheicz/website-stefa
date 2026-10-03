@@ -44,7 +44,7 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
   El QR de Plin va en `assets/img/marca/qr-pago.png`.
 
 - **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
-- **Redes sociales:** en el pie de cada página, TikTok ya apunta a @Stefachav; los íconos de LinkedIn e Instagram tienen `href="#"`: cambia `#` por el link de tu perfil.
+- **Redes sociales:** en el pie de cada página, los íconos de TikTok, Instagram y LinkedIn ya apuntan a tus perfiles. Para cambiarlos, busca su link en el pie de cada página.
 
 ## Pagos
 
