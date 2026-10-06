@@ -87,3 +87,21 @@
   content: 'Sube tu QR en assets/img/marca/yape-qr.png';
   padding: 20px;
 }
+
+/* Temario de 6 sesiones: dos filas de tres */
+.cs_stapes.m_stapes_6 {
+  flex-wrap: wrap;
+  row-gap: 60px;
+}
+.cs_stapes.m_stapes_6 .cs_step {
+  flex: 0 0 calc((100% - 70px) / 3);
+  min-width: 0;
+}
+.m_step_text {
+  margin-top: 16px;
+}
+@media (max-width: 991px) {
+  .cs_stapes.m_stapes_6 .cs_step {
+    flex-basis: 100%;
+  }
+}
