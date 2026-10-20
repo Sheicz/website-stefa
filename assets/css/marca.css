@@ -105,3 +105,38 @@
     flex-basis: 100%;
   }
 }
+
+/* Página de CV (cv.html) */
+.m_cv_contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 24px 0 32px;
+  list-style: none;
+}
+.m_cv_contacto a:hover {
+  color: #5533d8;
+}
+.m_cv_foto {
+  max-width: 420px;
+  margin-left: auto;
+}
+.m_cv_list {
+  list-style: none;
+}
+.m_cv_list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(32, 32, 32, 0.15);
+}
+.m_cv_claro .cs_exprience {
+  border-color: rgba(32, 32, 32, 0.15);
+}
+@media print {
+  .cs_site_header, .cs_footer, .cs_preloader, .m_no_print, .m_modal {
+    display: none !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

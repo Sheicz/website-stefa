@@ -46,6 +46,10 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 - **Logos de empresas:** en `index.html` (sección "MI TRAYECTORIA") cada empresa está como texto (`<span class="m_brand_text">BCP</span>`). Cuando tengas el logo en blanco, súbelo y cambia ese texto por `<img src="assets/img/brands/bcp.png" alt="BCP">`.
 - **Redes sociales:** en el pie de cada página, los íconos de TikTok, Instagram y LinkedIn ya apuntan a tus perfiles. Para cambiarlos, busca su link en el pie de cada página.
 
+## CV (página oculta)
+
+Tu CV está en `cv.html` con el mismo estilo de la web. No aparece en el menú ni en ninguna página y tiene `noindex`, así que Google no lo muestra: solo lo ve quien tenga el link **tudominio.com/cv**. El botón "Descargar en PDF" abre la impresión del navegador para guardarlo como PDF. Para editarlo, busca el texto en `cv.html`.
+
 ## Pagos
 
 - **Hoy (Plin o transferencia):** los botones "Inscribirme" y "Reservar" abren una ventana con tu QR de Plin, tu número, tu cuenta y el monto; luego te envían la constancia por WhatsApp.
