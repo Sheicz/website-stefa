@@ -48,7 +48,7 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 
 ## CV (página oculta)
 
-Tu CV está en `cv.html` con el mismo estilo de la web. No aparece en el menú ni en ninguna página y tiene `noindex`, así que Google no lo muestra: solo lo ve quien tenga el link **tudominio.com/cv**. El botón "Descargar en PDF" abre la impresión del navegador para guardarlo como PDF. Para editarlo, busca el texto en `cv.html`.
+Tu CV está en `cv.html` con el mismo estilo de la web. No aparece en el menú ni en ninguna página y tiene `noindex`, así que Google no lo muestra: solo lo ve quien tenga el link **tudominio.com/cv**. El botón "Descargar CV en PDF" baja tu archivo `assets/docs/CV_Sheila_Ccahua_Chavez.pdf`: para actualizarlo, sube tu nuevo PDF con el mismo nombre. Esta página no tiene menú. Para editar el texto, búscalo en `cv.html`.
 
 ## Pagos
 

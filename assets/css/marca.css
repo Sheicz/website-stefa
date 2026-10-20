@@ -117,9 +117,25 @@
 .m_cv_contacto a:hover {
   color: #5533d8;
 }
-.m_cv_foto {
-  max-width: 420px;
-  margin-left: auto;
+.m_cv_nombre {
+  margin-bottom: 16px;
+}
+.m_cv_resumen {
+  margin-bottom: 20px;
+}
+.m_cv_resumen:last-child {
+  margin-bottom: 0;
+}
+.m_cv_puntos {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  opacity: 0.85;
+}
+.m_cv_puntos li {
+  margin-bottom: 8px;
+}
+.m_cv_grupo + .m_cv_grupo {
+  margin-top: 40px;
 }
 .m_cv_list {
   list-style: none;
