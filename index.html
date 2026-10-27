@@ -18,6 +18,7 @@
   <!-- Style Links -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
       <div class="container">
         <div class="cs_main_header_in">
           <div class="cs_main_header_left">
-            <a class="cs_site_branding m_logo" href="index.html">STEFA</a>
+            <a class="cs_site_branding m_logo" href="index.html"><span class="m_logo_icono">S</span>STEFA</a>
           </div>
           <div class="cs_main_header_right">
             <div class="cs_nav">
@@ -70,63 +71,37 @@
   <!-- End Header Section -->
   <main>
     <!-- Start Hero Section -->
-    <section class="cs_hero cs_style_1">
+    <section class="m_hero">
       <div class="container">
-        <div class="cs_hero text-center">
-          <h1 class="cs_hero_title cs_font_90 cs_focus_color_2 cs_medium">¡HOLA, SOY STEFANY!</h1>
-          <h4 class="cs_hero_text cs_primary_color cs_font_25 cs_normal text-uppercase">Soy una profesional apasionada por la tecnología y la IA, con cerca de 5 años en el mundo corporativo y 3 como creadora de contenido.</h4>
-        </div>
-      </div>
-      <div class="cs_imagebox cs_style_1">
-        <div class="cs_imagebox_in">
-          <div class="cs_imagebox_bg cs_fidder_bg" data-src="assets/img/shapes/hero_bg_shape_1.svg"></div>
-          <img class="cs_imagebox_image position-relative w-100" src="assets/img/estefa/foto-principal.png" alt="Stefany">
-          <a href="contacto.html" class="cs_btn cs_center position-absolute">¡Hablemos!</a>
-          <img class="cs_imagebox_shape_1 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_6.svg" alt="">
-          <img class="cs_imagebox_shape_2 cs_sprin_animation position-absolute" src="assets/img/shapes/star_shape_4.svg" alt="">
-        </div>
-      </div>
-      <div class="cs_hero_bottom cs_focus_bg cs_white_color w-100">
-        <div class="container">
-          <div class="cs_hero_bottom_wrap d-md-flex justify-content-lg-between align-items-center">
-            <div class="cs_funfact_wrap d-flex">
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span><span class="odometer" data-count-to="5"></span>+</span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Años de<br> experiencia</p>
-                </div>
-              </div>
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span><span class="odometer" data-count-to="200"></span>+</span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Alumnos<br> formados</p>
-                </div>
-              </div>
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <span class="m_etiqueta">Cursos, talleres y charlas de datos e IA</span>
+            <h1 class="m_hero_titulo">¡Hola, soy<br>Stefany!<br><span class="m_morado">Tecnología e IA.</span></h1>
+            <p class="m_hero_texto">Soy una profesional apasionada por la tecnología y la IA, con cerca de 5 años en el mundo corporativo y 3 como creadora de contenido.</p>
+            <div class="m_hero_botones">
+              <a href="cursos.html" class="m_boton m_boton_morado">Ver cursos</a>
+              <a href="contacto.html" class="m_boton m_boton_borde">¡Hablemos!</a>
             </div>
-            <div class="cs_funfact_wrap d-flex">
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span><span class="odometer" data-count-to="10"></span>K+</span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Seguidores<br> en TikTok</p>
-                </div>
-              </div>
-              <div class="cs_funfact cs_style_1">
-                <div class="cs_funfact_info">
-                  <h3 class="cs_funfact_title cs_white_color cs_font_40 cs_medium">
-                    <span><span class="odometer" data-count-to="2"></span></span>
-                  </h3>
-                  <p class="cs_funfact_text cs_font_18 cs_white_color">Cursos<br> activos</p>
-                </div>
-              </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="m_tarjeta">
+              <div class="m_tarjeta_media"><img src="assets/img/estefa/foto-principal.png" alt="Stefany"></div>
+              <p class="m_tarjeta_titulo">Python y Machine Learning · Sesión 3</p>
+              <div class="m_progreso"><span></span></div>
+              <ul class="m_lecciones">
+                <li class="m_hecha">1. Python aplicado + Pandas</li>
+                <li class="m_hecha">2. EDA + Estadística + Visualización</li>
+                <li class="m_actual">3. Machine Learning: clasificación</li>
+              </ul>
+              <a class="m_tarjeta_link" href="curso-python-machine-learning.html">Ver temario</a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="m_cifras cs_focus_bg">
+      <div class="container">
+        <div class="m_cifras_grid"><div class="m_cifra"><strong>5+</strong><span>Años de<br> experiencia</span></div><div class="m_cifra"><strong>200+</strong><span>Alumnos<br> formados</span></div><div class="m_cifra"><strong>10K+</strong><span>Seguidores<br> en TikTok</span></div><div class="m_cifra"><strong>2</strong><span>Cursos<br> activos</span></div></div>
       </div>
     </section>
     <!-- End Hero Section -->
@@ -137,7 +112,7 @@
         <div class="cs_about cs_style_1">
           <div class="row">
             <div class="col-xxl-4 col-xl-5">
-              <h2 class="cs_about_title cs_font_70 cs_white_color cs_normal mb-0">CONÓCEME MÁS</h2>
+              <h2 class="cs_about_title cs_font_70 cs_white_color cs_normal mb-0">Conóceme más</h2>
             </div>
             <div class="col-xxl-8 col-xl-7">
               <p class="cs_about_text cs_font_25 cs_white_color text-uppercase cs_opacity_07 cs_line_top_1 mb-0">Soy data scientist y he trabajado en grandes corporativos. Hoy comparto lo que sé en cursos, talleres y charlas para que más personas usen los datos y la tecnología a su favor.</p>
@@ -164,7 +139,7 @@
             </div>
           </div>
           <div class="col-lg-8">
-            <h2 class=" cs_font_70 cs_primary_color  mb-0 cs_normal">MIS SERVICIOS</h2>
+            <h2 class=" cs_font_70 cs_primary_color  mb-0 cs_normal">Mis servicios</h2>
             <div class="cs_height_55 cs_height_lg_25"></div>
             <a href="talleres-empresas.html" class="cs_service cs_style_1 cs_parallax_mousemove_scene">
               <h4 class="cs_service_title cs_primary_color cs_font_25 mb-0 cs_normal">Talleres para empresas</h4>
@@ -221,7 +196,7 @@
     <section class="cs_focus_bg cs_white_color">
       <div class="cs_height_135 cs_height_lg_70"></div>
       <div class="container">
-        <h2 class="cs_white_color cs_font_70 cs_normal mb-0">PUESTOS</h2>
+        <h2 class="cs_white_color cs_font_70 cs_normal mb-0">Puestos</h2>
         <div class="cs_height_100 cs_height_lg_50"></div>
       </div>
       <div>
@@ -291,29 +266,29 @@
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">MIS CURSOS</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Mis cursos</h3>
               </div>
             </div>
           </div>
@@ -392,29 +367,29 @@
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
             </div>
           </div>
@@ -424,29 +399,29 @@
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
             </div>
             <div class="cs_moving_content cs_slide_left">
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
               <div class="d-flex align-items-center">
                 <img class="cs_sprin_animation cs_sprin_animation_10" src="assets/img/shapes/star_shape_4.svg" alt="">
-                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">DATA SCIENCE · PYTHON · MACHINE LEARNING</h3>
+                <h3 class="cs_focus_color cs_font_40 cs_medium mb-0">Data Science · Python · Machine Learning</h3>
               </div>
             </div>
           </div>
@@ -460,7 +435,7 @@
         <div class="cs_accordians cs_style_2">
           <div class="cs_accordian">
             <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">TECNOLOGÍA E IA</h2>
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">Tecnología e IA</h2>
               <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
@@ -474,7 +449,7 @@
           </div>
           <div class="cs_accordian">
             <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">PASIÓN POR APRENDER</h2>
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">Pasión por aprender</h2>
               <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
@@ -488,7 +463,7 @@
           </div>
           <div class="cs_accordian active">
             <div class="cs_accordian_head d-flex justify-content-between align-items-center">
-              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">DETRÁS DE LA PROFESIONAL</h2>
+              <h2 class="cs_accordian_title cs_white_color cs_font_70 cs_normal mb-0">Detrás de la profesional</h2>
               <a href="sobre-mi.html" class="cs_btn cs_style_3 cs_flex_none cs_center">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
                 <img src="assets/img/icons/arrow_sm_down_light.svg" alt="flecha">
@@ -516,7 +491,7 @@
                 <img src="assets/img/shapes/star_shape_2.svg" alt="">
               </div>
               <div class="cs_height_100"></div>
-              <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal justify-self-end">LO QUE DICEN DE MÍ</h2>
+              <h2 class="cs_section_title cs_primary_color cs_font_70 mb-0 cs_opacity_05 cs_normal justify-self-end">Lo que dicen de mí</h2>
             </div>
           </div>
           <div class="col-lg-7">
@@ -526,13 +501,13 @@
                   <div class="slick_slide_in">
                     <div class="cs_testimonial cs_style_1">
                       <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“EDITAR: aquí va el testimonio de un alumno de tus cursos.”</p>
-                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">NOMBRE, CURSO</div>
+                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">Nombre, curso</div>
                     </div>
                   </div>
                   <div class="slick_slide_in">
                     <div class="cs_testimonial cs_style_1">
                       <p class="cs_testimonial_text cs_font_40 cs_primary_color cs_medium">“EDITAR: aquí va el testimonio de una empresa de tus talleres.”</p>
-                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">NOMBRE, EMPRESA</div>
+                      <div class="cs_testimonial_author cs_font_25 cs_primary_color position-relative text-uppercase">Nombre, empresa</div>
                     </div>
                   </div>
                 </div>
@@ -562,7 +537,7 @@
         <div class="cs_cta cs_style_1 text-center cs_focus_bg cs_white_color cs_radius_40">
           <div class="cs_height_100 cs_height_lg_80"></div>
           <div class="cs_cta_info">
-            <h2 class="cs_cta_title cs_normal text-uppercase cs_white_color cs_font_70">¿TIENES UN PROYECTO EN MENTE?</h2>
+            <h2 class="cs_cta_title cs_normal text-uppercase cs_white_color cs_font_70">¿Tienes un proyecto en mente?</h2>
             <h3 class="cs_cta_subtitle cs_medium cs_white_color cs_font_40">¡Conversemos!</h3>
             <a class="cs_btn cs_style_1 cs_focus_2" href="contacto.html"><span>Contáctame</span></a>
           </div>
@@ -579,7 +554,7 @@
         <div class="cs_sprin_animation">
           <img src="assets/img/shapes/star_shape_1.svg" alt="">
         </div>
-        <h3 class="cs_section_title cs_white_color cs_font_70 cs_normal mb-0">PREGUNTAS</h3>
+        <h3 class="cs_section_title cs_white_color cs_font_70 cs_normal mb-0">Preguntas</h3>
       </div>
       <div class="cs_height_65 cs_height_lg_30"></div>
       <div class="cs_accordians cs_style_1">
@@ -623,7 +598,7 @@
           <div class="row">
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">enlaces</h4>
+                <h4 class="cs_widget_title cs_white_color text-uppercase cs_normal">Enlaces</h4>
                 <ul class="cs_footer_links cs_mp_0">
                   <li><a class="cs_font_18 cs_text_btn_2" href="sobre-mi.html"><span class="cs_text_btn_text">Sobre mí</span></a></li>
                   <li><a class="cs_font_18 cs_text_btn_2" href="talleres-empresas.html"><span class="cs_text_btn_text">Servicios</span></a></li>
@@ -634,13 +609,13 @@
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">UBICACIÓN</h4>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Ubicación</h4>
                 <p class="cs_fooer_text cs_font_18 cs_opacity_07 mb-0">Lima, Perú</p>
               </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">contacto</h4>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Contacto</h4>
                 <ul class="cs_text_list cs_mp_0 cs_opacity_07 mb-0">
               <li class="cs_font_18">Stefany</li>
               <li class="cs_font_18"><a data-correo href="mailto:stefachav@gmail.com">stefachav@gmail.com</a></li>
@@ -650,7 +625,7 @@
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6">
               <div class="cs_widget_wrap">
-                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">SÍGUEME</h4>
+                <h4 class="cs_widget_title cs_white_color cs_font_25 text-uppercase cs_normal">Sígueme</h4>
                 <div class="cs_social cs_style_1">
               <a class="cs_center cs_font_18" href="https://www.tiktok.com/@stefachav" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
               <a class="cs_center cs_font_18" href="https://www.linkedin.com/in/sheilastccahua/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>

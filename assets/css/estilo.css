@@ -1,0 +1,337 @@
+/*
+|--------------------------------------------------------------------------
+| Estilo de la marca: fondo crema, acento morado, etiquetas verde lima,
+| titulares negros en negrita y botones redondeados.
+| Cambia los colores aquí abajo (:root) y se actualizan en toda la web.
+|--------------------------------------------------------------------------
+*/
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --m-crema: #f5f3ee;
+  --m-blanco: #ffffff;
+  --m-morado: #5b3ff0;
+  --m-morado-osc: #4a2fd9;
+  --m-lima: #dcf57a;
+  --m-tinta: #17171b;
+  --m-texto: #55555c;
+  --m-linea: rgba(23, 23, 27, 0.1);
+}
+
+/* Base */
+body,
+html {
+  background-color: var(--m-crema);
+  font-family: "Inter", sans-serif;
+  color: var(--m-texto);
+}
+h1, h2, h3, h4, h5, h6,
+.cs_btn,
+.cs_nav .cs_nav_list > li > a,
+.m_logo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--m-tinta);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.12em;
+}
+.text-uppercase {
+  text-transform: none !important;
+}
+.cs_white_bg,
+.cs_white_bg_hover:hover,
+.cs_secondary_bg {
+  background-color: var(--m-crema);
+}
+.cs_primary_color {
+  color: var(--m-tinta);
+}
+
+/* Colores de acento: morado y lima en lugar de rosado y celeste */
+.cs_focus_color,
+.cs_focus_color_hover:hover,
+.cs_focus_color_2,
+.cs_focus_color_2_hover:hover {
+  color: var(--m-morado);
+}
+.cs_focus_bg,
+.cs_focus_bg_hover:hover {
+  background-color: var(--m-morado);
+}
+.cs_focus_bg_2,
+.cs_focus_bg_2_hover:hover,
+.cs_focus_bg_3,
+.cs_focus_bg_3_hover:hover {
+  background-color: var(--m-lima);
+  color: var(--m-tinta);
+}
+.cs_focus_color_3 {
+  color: var(--m-lima);
+}
+.cs_focus_bg h1, .cs_focus_bg h2, .cs_focus_bg h3, .cs_focus_bg h4,
+.cs_focus_bg .cs_white_color {
+  color: #ffffff;
+}
+
+/* Botones redondeados */
+.cs_btn.cs_style_1 {
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.cs_btn.cs_style_1.cs_focus_1,
+.cs_btn.cs_style_1.cs_focus_2 {
+  background-color: var(--m-morado);
+  color: #ffffff;
+}
+.cs_focus_bg .cs_btn.cs_style_1.cs_focus_1,
+.cs_focus_bg .cs_btn.cs_style_1.cs_focus_2 {
+  background-color: var(--m-lima);
+  color: var(--m-tinta);
+}
+.cs_btn.cs_style_1.cs_border_btn {
+  border: 2px solid var(--m-tinta);
+  color: var(--m-tinta);
+}
+
+/* Cabecera */
+.cs_site_header.cs_style_1 {
+  border-bottom: 1px solid var(--m-linea);
+}
+.cs_site_header.cs_style_1.cs_gescout_sticky,
+.cs_site_header.cs_style_1.cs_gescout_show,
+.cs_main_header {
+  background-color: var(--m-crema);
+}
+.m_logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--m-tinta);
+}
+.m_logo_icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--m-morado);
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+}
+.cs_nav .cs_nav_list a {
+  text-transform: none;
+}
+.cs_nav .cs_nav_list > li > a {
+  font-weight: 500;
+  color: var(--m-tinta);
+}
+.cs_nav .cs_nav_list > li.active > a,
+.cs_nav .cs_nav_list > li > a:hover {
+  color: var(--m-morado);
+}
+
+/* Portada al estilo de la referencia */
+.m_hero {
+  padding: 200px 0 100px;
+}
+.m_etiqueta {
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background-color: var(--m-lima);
+  color: var(--m-tinta);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+.m_hero_titulo {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 1.02em;
+  letter-spacing: -0.035em;
+  margin-bottom: 28px;
+}
+.m_morado {
+  color: var(--m-morado);
+}
+.m_hero_texto {
+  font-size: 21px;
+  line-height: 1.6em;
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+.m_hero_botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.m_boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 34px;
+  border-radius: 999px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+.m_boton_morado {
+  background-color: var(--m-morado);
+  color: #ffffff;
+  border: 2px solid var(--m-morado);
+}
+.m_boton_morado:hover {
+  background-color: var(--m-morado-osc);
+  color: #ffffff;
+}
+.m_boton_borde {
+  border: 2px solid var(--m-tinta);
+  color: var(--m-tinta);
+}
+.m_boton_borde:hover {
+  background-color: var(--m-tinta);
+  color: #ffffff;
+}
+.m_tarjeta {
+  background-color: var(--m-blanco);
+  border-radius: 28px;
+  padding: 20px 20px 26px;
+  box-shadow: 0 24px 60px rgba(23, 23, 27, 0.08);
+  border: 1px solid var(--m-linea);
+}
+.m_tarjeta_media {
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: var(--m-tinta);
+  aspect-ratio: 16 / 10;
+  margin-bottom: 20px;
+}
+.m_tarjeta_media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.m_tarjeta_titulo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--m-tinta);
+  margin-bottom: 14px;
+}
+.m_progreso {
+  height: 8px;
+  border-radius: 999px;
+  background-color: #ece9ff;
+  margin-bottom: 16px;
+}
+.m_progreso span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--m-morado);
+}
+.m_lecciones {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  font-size: 15px;
+}
+.m_lecciones li {
+  position: relative;
+  padding: 5px 0 5px 28px;
+}
+.m_lecciones li::before {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-weight: 700;
+}
+.m_lecciones .m_hecha::before {
+  content: "✓";
+  color: #3d8b40;
+}
+.m_lecciones .m_actual {
+  color: var(--m-tinta);
+  font-weight: 700;
+}
+.m_lecciones .m_actual::before {
+  content: "▶";
+  font-size: 11px;
+  color: var(--m-morado);
+}
+.m_tarjeta_link {
+  font-weight: 600;
+  color: var(--m-morado);
+}
+.m_cifras {
+  padding: 30px 0;
+}
+@media (max-width: 991px) {
+  .m_hero {
+    padding: 140px 0 60px;
+  }
+  .m_hero .col-lg-5 {
+    margin-top: 44px;
+  }
+  .m_hero_texto {
+    font-size: 18px;
+  }
+}
+
+/* CV */
+.m_cv_nombre {
+  color: var(--m-tinta);
+}
+
+/* Titulares siempre en negrita, aunque la plantilla marque cs_normal */
+h1, h2, h3 {
+  font-weight: 800 !important;
+}
+h4, h5, h6 {
+  font-weight: 700 !important;
+}
+
+/* Cifras de la portada */
+.m_cifras_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.m_cifra strong {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1em;
+}
+.m_cifra span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .m_cifras_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Detalles en lima y logo claro sobre fondos morados */
+.cs_line_top_1::before,
+.cs_line_top_1:before {
+  background-color: var(--m-lima);
+}
+.m_logo.m_logo_light,
+.cs_focus_bg .m_logo,
+footer .m_logo {
+  color: #ffffff;
+}

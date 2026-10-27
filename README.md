@@ -67,3 +67,7 @@ Cada cambio que guardes en GitHub se publica solo.
 
 - `assets/js/sitio.js`: precios, datos de pago, correo/WhatsApp, ventana de pago y formularios.
 - `assets/css/marca.css`: logo en texto, empresas en texto y ventana de pago. `assets/css/style.css` no se tocó.
+
+## Estilo visual
+
+Los colores, tipografías y botones del estilo actual (fondo crema, morado, etiquetas lima) están en `assets/css/estilo.css`. Cambia los valores de `:root` al inicio de ese archivo para ajustar los colores de toda la web.
