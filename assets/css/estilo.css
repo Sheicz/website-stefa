@@ -131,7 +131,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cs_nav .cs_nav_list > li > a {
   font-weight: 500;
-  color: var(--m-tinta);
+}
+@media (min-width: 1200px) {
+  .cs_nav .cs_nav_list > li > a {
+    color: var(--m-tinta);
+  }
+}
+/* Menú del celular: fondo oscuro, opciones en blanco */
+@media (max-width: 1199px) {
+  .cs_nav .cs_nav_list a {
+    color: #ffffff;
+  }
 }
 .cs_nav .cs_nav_list > li.active > a,
 .cs_nav .cs_nav_list > li > a:hover {
