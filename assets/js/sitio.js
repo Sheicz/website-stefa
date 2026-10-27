@@ -20,14 +20,11 @@ var CONFIG = {
     qr: 'assets/img/marca/qr-pago.png', // sube aquí la imagen de tu QR de Plin
   },
 
-  // Precio de cada curso o servicio que se paga en la web.
+  // Precio de cada servicio que se paga en la web.
   // precio vacío '' = el botón abre WhatsApp/correo para consultar.
   // linkPago = cuando tengas pasarela (Mercado Pago, Culqi, Izipay, Hotmart...)
   //            pega aquí el link y el botón irá directo a pagar.
   productos: {
-    'python-ml': { nombre: 'Curso Python y Machine Learning', precio: '', linkPago: '' },
-    'python-101': { nombre: 'Curso Python 101', precio: '', linkPago: '' },
-    'python-asincrono': { nombre: 'Python asíncrono (mini clases grabadas)', precio: '', linkPago: '' },
     'asesoria': { nombre: 'Asesoría profesional', precio: '', linkPago: '' },
   },
 };
@@ -57,7 +54,7 @@ var CONFIG = {
     }
   }
 
-  // Precios en las páginas: <span data-precio="python-ml"></span>
+  // Precios en las páginas: <span data-precio="asesoria"></span>
   document.querySelectorAll('[data-precio]').forEach(function (el) {
     var p = CONFIG.productos[el.getAttribute('data-precio')];
     if (p) el.textContent = p.precio ? 'S/ ' + p.precio : 'Consultar';
@@ -89,7 +86,7 @@ var CONFIG = {
   }
 
   document.addEventListener('click', function (e) {
-    // Botones de compra: <a data-comprar="python-ml">
+    // Botones de compra: <a data-comprar="asesoria">
     var btn = e.target.closest('[data-comprar]');
     if (btn) {
       e.preventDefault();

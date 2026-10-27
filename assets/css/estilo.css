@@ -304,7 +304,7 @@ h4, h5, h6 {
 /* Cifras de la portada */
 .m_cifras_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .m_cifra strong {
