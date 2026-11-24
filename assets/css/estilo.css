@@ -345,3 +345,8 @@ h4, h5, h6 {
 footer .m_logo {
   color: #ffffff;
 }
+
+/* Texto morado en las bandas lima (se leía blanco sobre lima) */
+.cs_focus_bg .cs_moving_container_wrap h3 {
+  color: var(--m-morado);
+}
