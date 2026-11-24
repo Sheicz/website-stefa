@@ -8,10 +8,6 @@ Web de Stefany hecha con la plantilla **Grace**, con el mismo diseño y todas su
 | --- | --- | --- |
 | Inicio | `index.html` | `plantilla-inicio.html` (inicio original) |
 | Sobre mí | `sobre-mi.html` | `about.html` |
-| Talleres para empresas | `talleres-empresas.html` | `service-details-v1.html` |
-| Asesorías profesionales | `asesorias-profesionales.html` | `service-details-v1.html` |
-| Ponencias & Charlas | `ponencias.html` | `service-details-v1.html` |
-| Colaboraciones & Marcas | `colaboraciones.html` | `service-details-v1.html` |
 | Contacto | `contacto.html` | `contact.html` |
 
 Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `home-v2.html`, etc.) siguen en el repo como referencia, pero ya no aparecen en el menú. Puedes borrarlas cuando quieras.
@@ -24,13 +20,8 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 
 | Archivo | Dónde sale | Tamaño sugerido |
 | --- | --- | --- |
-| `foto-principal.png` | Tu foto en sobre mí (PNG sin fondo) | 600 × 640 |
-| `servicio-talleres.jpg` | Lista de servicios del inicio | 1000 × 620 |
-| `servicio-asesorias.jpg` | Lista de servicios del inicio | 1000 × 620 |
-| `servicio-ponencias.jpg` | Lista de servicios del inicio | 1000 × 620 |
-| `servicio-colaboraciones.jpg` | Lista de servicios del inicio | 1000 × 620 |
-| `servicio-detalle-1.jpg` … `-4.jpg` | Las 4 tarjetas dentro de cada página de servicio | 1000 × 640 |
-| `evento-1.jpg` … `evento-3.jpg` | "Momentos en mis talleres y charlas" en sobre mí | 480 × 550 |
+| `stefany-charla.jpg` | Tu foto en el inicio y en sobre mí | 1100 × 1430 |
+| `evento-1.jpg` … `evento-5.jpg` | "Momentos en mis talleres y charlas" en sobre mí | 1000 de ancho |
 
   El QR de Plin va en `assets/img/marca/qr-pago.png`.
 
