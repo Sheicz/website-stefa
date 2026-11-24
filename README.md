@@ -20,8 +20,8 @@ Las páginas originales de la plantilla en inglés (`about.html`, `blog.html`, `
 
 | Archivo | Dónde sale | Tamaño sugerido |
 | --- | --- | --- |
-| `stefany-charla.jpg` | Tu foto en el inicio y en sobre mí | 1100 × 1430 |
-| `evento-1.jpg` … `evento-5.jpg` | "Momentos en mis talleres y charlas" en sobre mí | 1000 de ancho |
+| `stefany-charla.jpg` | Tu foto en sobre mí | 1100 × 1430 |
+| `evento-1.jpg` … `evento-6.jpg` | "Momentos en mis talleres y charlas" en sobre mí (cada una recortada al tamaño de su espacio) | 958 × 1098, 1182 × 738 o 784 × 942 |
 
   El QR de Plin va en `assets/img/marca/qr-pago.png`.
 
